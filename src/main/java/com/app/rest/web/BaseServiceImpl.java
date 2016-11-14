@@ -1,10 +1,9 @@
 package com.app.rest.web;
 
 import org.springframework.stereotype.Service;
-
-import com.app.rest.vo.AppResponseVO;
+import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
-import com.app.rest.vo.WelfareResponseVO;
+import com.app.rest.vo.WelfareVO;
 
 /**
 Time   : 12:53:28 am
@@ -16,7 +15,7 @@ author : nitesh
 public class BaseServiceImpl implements BaseService{
 
 	@Override
-	public WelfareResponseVO<AppResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
+	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
 		System.out.println("userresponse");
 		return null;
 	}

@@ -5,6 +5,6 @@ created: 14-Nov-2016
 author : nitesh
 **/
 
-public class AppResponseVO {
-
+public class AccountCreationResponseVO {
+	
 }

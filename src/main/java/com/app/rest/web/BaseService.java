@@ -7,9 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.app.rest.vo.AppResponseVO;
+import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
-import com.app.rest.vo.WelfareResponseVO;
+import com.app.rest.vo.WelfareVO;
 
 /**
 Time   : 12:53:00 am
@@ -23,7 +23,7 @@ public interface BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/registerNewUser")
-	public WelfareResponseVO<AppResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO);
+	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO);
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)

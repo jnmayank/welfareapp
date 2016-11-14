@@ -1,5 +1,4 @@
 <h1>Registration Page</h1>
-
 <form ng-submit="register(username, password, email,dateofBirth)"
 	class="ng-scope ng-pristine ng-valid">
 	<label>User name</label> 
@@ -17,6 +16,9 @@
 	<input type="date" ng-model="dateofBirth" class="ng-pristine ng-valid">
 	<br />
 	
-	<button class="btn btn-success" ng-click="">Submit</button>
+	<input type="submit">
+	<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
 	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	
+	{{PostDataResponse}}
 </form>
