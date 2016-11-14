@@ -25,13 +25,13 @@ app.controller('RegistrCtrl', function($scope,$http,XhrService) {
 		 
 		 $http.post(serviceuri+'welfareservice/registerNewUser', data, config)
          .success(function (data, status, headers, config) {
-             $scope.PostDataResponse = data;
+             $scope.PostDataResponse = data.object.resultmessage;
          })
          .error(function (data, status, header, config) {
-             $scope.ResponseDetails = "Data: " + data +
+             $scope.ResponseDetails = "";/*"Data: " + data +
                  "<hr />status: " + status +
                  "<hr />headers: " + header +
-                 "<hr />config: " + config;
+                 "<hr />config: " + config;*/
          });
 		
 	}
