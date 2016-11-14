@@ -1,7 +1,5 @@
 package com.app.rest.vo;
 
-import java.util.Date;
-
 /**
 Time   : 12:57:48 am
 created: 14-Nov-2016
@@ -13,7 +11,7 @@ public class UserWelfareAccountVO {
 	private String username;
 	private String password;
 	private String email;
-	private Date dateofBirth;
+	private String dateofBirth;
 	/**
 	 * @return the username
 	 */
@@ -53,13 +51,13 @@ public class UserWelfareAccountVO {
 	/**
 	 * @return the dateofBirth
 	 */
-	public Date getDateofBirth() {
+	public String getDateofBirth() {
 		return dateofBirth;
 	}
 	/**
 	 * @param dateofBirth the dateofBirth to set
 	 */
-	public void setDateofBirth(Date dateofBirth) {
+	public void setDateofBirth(String dateofBirth) {
 		this.dateofBirth = dateofBirth;
 	}
 	/* (non-Javadoc)

@@ -16,14 +16,16 @@ public class BaseServiceImpl implements BaseService{
 
 	@Override
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
-		System.out.println("userresponse");
-		return null;
+		AccountCreationResponseVO accountCreationResponseVO = new AccountCreationResponseVO();
+		accountCreationResponseVO.setResultmessage("success");
+		WelfareVO<AccountCreationResponseVO> response = new WelfareVO<AccountCreationResponseVO>(accountCreationResponseVO, false);
+		return response;
 	}
 
 	@Override
-	public String getCallTest(String data) {
+	public String getCallTest() {
 		System.out.println("userresponse");
-		return "userresponse"+" = "+data;
+		return "userresponse"+" = ";
 	}
 
 }

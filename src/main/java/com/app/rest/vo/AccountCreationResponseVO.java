@@ -6,5 +6,20 @@ author : nitesh
 **/
 
 public class AccountCreationResponseVO {
+	private String resultmessage;
+
+	/**
+	 * @return the resultmessage
+	 */
+	public String getResultmessage() {
+		return resultmessage;
+	}
+
+	/**
+	 * @param resultmessage the resultmessage to set
+	 */
+	public void setResultmessage(String resultmessage) {
+		this.resultmessage = resultmessage;
+	}
 	
 }

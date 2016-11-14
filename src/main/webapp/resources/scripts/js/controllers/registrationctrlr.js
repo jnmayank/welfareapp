@@ -13,8 +13,8 @@ app.controller('RegistrCtrl', function($scope,$http,XhrService) {
 		 var data = {
 				'username': username,
 				'password':password,
-				'emailid':email,
-				'date':dateofBirth;
+				'email':email,
+				'dateofBirth':dateofBirth
 		};
 		
 		 var config = {
@@ -23,7 +23,7 @@ app.controller('RegistrCtrl', function($scope,$http,XhrService) {
 	                }
 	            }
 		 
-		 $http.post(serviceuri, $scope.data, config)
+		 $http.post(serviceuri+'welfareservice/registerNewUser', data, config)
          .success(function (data, status, headers, config) {
              $scope.PostDataResponse = data;
          })

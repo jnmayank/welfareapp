@@ -29,6 +29,6 @@ public interface BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/getCall")
-	public String getCallTest(String data);
+	public String getCallTest();
 	
 }
