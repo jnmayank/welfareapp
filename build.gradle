@@ -38,7 +38,6 @@ dependencies{
     compile group: 'commons-collections',name: 'commons-collections',version:'3.2'
     compile group: 'aopalliance',name: 'aopalliance',version:'1.0'
 
-
 	compile group: 'org.aspectj',name: 'aspectjrt',version:'1.8.1'
 	compile group: 'org.slf4j',name: 'slf4j-api',version:'1.6.1'
 	compile group: 'org.slf4j',name: 'jcl-over-slf4j',version:'1.6.1'
