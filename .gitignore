@@ -1,0 +1,8 @@
+/build/
+/bin/
+/.settings/
+/.gradle/
+*.class
+*.classpath
+*.project
+*.tern-project
