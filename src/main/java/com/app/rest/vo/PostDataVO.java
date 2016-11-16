@@ -7,7 +7,7 @@ author : nitesh
 
 public class PostDataVO {
 	private String postData;
-
+	
 	public String getPostData() {
 		return postData;
 	}

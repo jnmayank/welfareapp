@@ -30,7 +30,7 @@ public interface BaseService {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/registerNewUser")
+	@Path("/feedNewPost")
 	public WelfareVO<PostCreatedSuccessfullVO> feedNewPost(PostDataVO postDataVO);
 	
 	@GET
