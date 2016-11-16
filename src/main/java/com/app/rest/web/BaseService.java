@@ -8,6 +8,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.app.rest.vo.AccountCreationResponseVO;
+import com.app.rest.vo.PostCreatedSuccessfullVO;
+import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
 
@@ -25,10 +27,18 @@ public interface BaseService {
 	@Path("/registerNewUser")
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO);
 
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/registerNewUser")
+	public WelfareVO<PostCreatedSuccessfullVO> feedNewPost(PostDataVO postDataVO);
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/getCall")
 	public String getCallTest();
+	
+	
 	
 }
