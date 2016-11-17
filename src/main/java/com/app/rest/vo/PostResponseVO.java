@@ -8,7 +8,7 @@ created: 16-Nov-2016
 author : nitesh
 **/
 
-public class PostCreatedSuccessfullVO {
+public class PostResponseVO {
 	private String postData;
 	private Date postCreationDate;
 	public String getPostData() {
@@ -45,10 +45,10 @@ public class PostCreatedSuccessfullVO {
 		if (obj == null) {
 			return false;
 		}
-		if (!(obj instanceof PostCreatedSuccessfullVO)) {
+		if (!(obj instanceof PostResponseVO)) {
 			return false;
 		}
-		PostCreatedSuccessfullVO other = (PostCreatedSuccessfullVO) obj;
+		PostResponseVO other = (PostResponseVO) obj;
 		if (postCreationDate == null) {
 			if (other.postCreationDate != null) {
 				return false;

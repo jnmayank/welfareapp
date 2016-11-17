@@ -1,8 +1,11 @@
 package com.app.rest.web;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Service;
 import com.app.rest.vo.AccountCreationResponseVO;
-import com.app.rest.vo.PostCreatedSuccessfullVO;
+import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
@@ -24,15 +27,21 @@ public class BaseServiceImpl implements BaseService{
 		return response;
 	}
 
-	@Override
-	public String getCallTest() {
-		System.out.println("userresponse");
-		return "userresponse"+" = ";
-	}
 
 	@Override
-	public WelfareVO<PostCreatedSuccessfullVO> feedNewPost(PostDataVO postDataVO) {
+	public WelfareVO<PostResponseVO> feedNewPost(PostDataVO postDataVO) {
 		// complete implementation
+		PostResponseVO pvo = new PostResponseVO();
+		pvo.setPostCreationDate(new Date());
+		pvo.setPostData(postDataVO.getPostData());
+		WelfareVO<PostResponseVO> response = new WelfareVO<PostResponseVO>(pvo, false);
+		return response;
+	}
+
+
+	@Override
+	public WelfareVO<BlogDataPostScrollVO> getPostScroll(String after) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

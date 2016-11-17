@@ -5,10 +5,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.app.rest.vo.AccountCreationResponseVO;
-import com.app.rest.vo.PostCreatedSuccessfullVO;
+import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
@@ -31,13 +33,13 @@ public interface BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/feedNewPost")
-	public WelfareVO<PostCreatedSuccessfullVO> feedNewPost(PostDataVO postDataVO);
+	public WelfareVO<PostResponseVO> feedNewPost(PostDataVO postDataVO);
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/getCall")
-	public String getCallTest();
+	@Path("/getBloggerData")
+	public WelfareVO<BlogDataPostScrollVO> getPostScroll(@QueryParam("after")String after);
 	
 	
 	

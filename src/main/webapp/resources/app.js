@@ -2,7 +2,7 @@
  * 
  */
 
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute","infinite-scroll"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -18,7 +18,7 @@ app.config(function($routeProvider) {
         controller: "LoginCtrl"
     }).when("/blogging", {
     	templateUrl: "./resources/views/blogging.htm",
-    	controller: "BlogingCtrl"
+    	controller: "BloggingCtrl"
     });
     /*.otherwise({
     	redirectTo: '/'
