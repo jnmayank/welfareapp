@@ -8,12 +8,18 @@
 </form>
 
 
-<ul tagged-infinite-scroll="getMore()" tagged-infinite-scroll-disabled="fetching || disabled">
+<!-- <ul tagged-infinite-scroll="getMore()" tagged-infinite-scroll-disabled="fetching || disabled">
       <li ng-repeat="item in items">
         Comment : {{ item.postData }}
         Comment Date: {{item.postCreationDate}}
       </li>
-</ul>
+</ul> -->
+
+<div infinite-scroll="getMoreData()">
+    <div ng-repeat="item in items" class="userContainer">
+        <h4>{{item.postCreationDate}} {{item.postData}}</h4>
+    </div>
+</div>
 
 <!-- <div infinite-scroll='welfareData.nextPage()' infinite-scroll-disabled='welfareData.busy' infinite-scroll-distance='1'>
     <div ng-repeat='item in welfareData.items'>

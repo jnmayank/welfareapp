@@ -26,7 +26,7 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
         });
 	};
 	
-	$scope.page = 1;
+	/*$scope.page = 1;
 	  $scope.items = [];
 	  $scope.fetching = false;
 	  $scope.disabled = false;
@@ -42,7 +42,30 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
 	        $scope.disabled = true; // Disable further calls if there are no more items
 	      }
 	    });
-	  };
+	  };*/
+	  
+
+	  $scope.page = 1;
+	  $scope.items = [];
+	  $scope.fetching = false;
+	  $scope.disabled = false;
+	  $scope.getMoreData = function () {
+		    $scope.page++;
+		    $scope.fetching = true; // Block fetching until the AJAX call returns
+		  var serviceURL = XhrService.getServiceBaseUrl()+'welfareservice/getMoreData?after='+$scope.page;
+
+		  $http.get(serviceURL, { page : $scope.page }).then(function(items) {
+		      $scope.fetching = false;
+		      if (items.data.object.postDataList.length) {
+		        $scope.items = $scope.items.concat(items.data.object.postDataList);
+		      } else {
+		        $scope.disabled = true; // Disable further calls if there are no more items
+		      }
+		    });
+		  
+	  
+	  }
+	  
 });
 
 /*app.factory('WelfareApp', function($http,XhrService) {
