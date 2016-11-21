@@ -49,6 +49,7 @@ public class BaseServiceImpl implements BaseService{
 		
 		Integer data = Integer.parseInt(after);
 		for(int i=0;i<9;i++){
+			data++;
 			PostResponseVO pvo =  new PostResponseVO();
 			pvo.setPostData("postdata"+(data+i));
 			pvo.setPostCreationDate(new Date());
