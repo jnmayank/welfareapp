@@ -15,7 +15,7 @@
       </li>
 </ul> -->
 
-<div infinite-scroll="getMoreData()">
+<div id='base-div' infinite-scroll="getMoreData()">
     <div ng-repeat="item in items" class="userContainer" id="{{ 'object-' + $index }}">
         <h4>{{item.postCreationDate}} {{item.postData}}</h4>
     </div>

@@ -4,7 +4,7 @@
 
 app.controller('BloggingCtrl', function($scope,$http,XhrService) {
 	$scope.postYourFeed= function(feed) {
-		var serviceUri = XhrService.getServiceBaseUrl()+'/welfareservice/feedNewPost';
+		var serviceUri = XhrService.getServiceBaseUrl()+'welfareservice/feedNewPost';
 		var data = {
 				'postData': feed
 		}
@@ -17,6 +17,11 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
         .success(function (data, status, headers, config) {
             $scope.PostDataResponse = data.object.postData;
             $scope.postDate =  data.object.postCreationDate;
+            var el = document.getElementById('base-div');
+            var element = document.createElement("div");
+            element.className='userContainer';
+            element.appendChild(document.createTextNode('postDate: '+$scope.postDate+': postData: '+$scope.PostDataResponse));	
+            el.insertBefore(element, el.firstChild);
         })
         .error(function (data, status, header, config) {
             $scope.ResponseDetails = "";/*"Data: " + data +
