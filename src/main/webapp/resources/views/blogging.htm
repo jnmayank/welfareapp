@@ -7,7 +7,15 @@
 	<input type="submit">
 </form>
 
-<div infinite-scroll='welfareData.nextPage()' infinite-scroll-disabled='welfareData.busy' infinite-scroll-distance='1'>
+
+<ul tagged-infinite-scroll="getMore()" tagged-infinite-scroll-disabled="fetching || disabled">
+      <li ng-repeat="item in items">
+        Comment : {{ item.postData }}
+        Comment Date: {{item.postCreationDate}}
+      </li>
+</ul>
+
+<!-- <div infinite-scroll='welfareData.nextPage()' infinite-scroll-disabled='welfareData.busy' infinite-scroll-distance='1'>
     <div ng-repeat='item in welfareData.items'>
       <span class='postData'>{{item.postData}}</span>
       <span class='postDate'>
@@ -16,7 +24,7 @@
       <div style='clear: both;'></div>
     </div>
     <div ng-show='welfareData.busy'>Loading data...</div>
-  </div>
+  </div> -->
 
 <!-- <span>Post Data: {{PostDataResponse}}</span>
 

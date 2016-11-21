@@ -1,6 +1,8 @@
 package com.app.rest.web;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import com.app.rest.vo.AccountCreationResponseVO;
@@ -41,8 +43,19 @@ public class BaseServiceImpl implements BaseService{
 
 	@Override
 	public WelfareVO<BlogDataPostScrollVO> getPostScroll(String after) {
-		// TODO Auto-generated method stub
-		return null;
+		BlogDataPostScrollVO bvo = new BlogDataPostScrollVO();
+		List<PostResponseVO> postDataList = new ArrayList<>();
+		bvo.setPostDataList(postDataList);
+		
+		Integer data = Integer.parseInt(after);
+		for(int i=0;i<9;i++){
+			PostResponseVO pvo =  new PostResponseVO();
+			pvo.setPostData("postdata"+(data+i));
+			pvo.setPostCreationDate(new Date());
+			postDataList.add(pvo);
+		}
+		WelfareVO<BlogDataPostScrollVO> wvoResponse = new WelfareVO<BlogDataPostScrollVO>(bvo, false);
+		return wvoResponse;
 	}
 
 }

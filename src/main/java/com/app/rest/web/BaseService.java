@@ -38,7 +38,7 @@ public interface BaseService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/getBloggerData")
+	@Path("/getMoreData")
 	public WelfareVO<BlogDataPostScrollVO> getPostScroll(@QueryParam("after")String after);
 	
 	
