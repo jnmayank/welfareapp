@@ -17,10 +17,13 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
         .success(function (data, status, headers, config) {
             $scope.PostDataResponse = data.object.postData;
             $scope.postDate =  data.object.postCreationDate;
+            document.getElementById("postarea").value = "";
             var el = document.getElementById('base-div');
             var element = document.createElement("div");
             element.className='userContainer';
-            element.appendChild(document.createTextNode('postDate: '+$scope.postDate+': postData: '+$scope.PostDataResponse));	
+            var h4tag = document.createElement('h4');
+            h4tag.appendChild(document.createTextNode($scope.postDate+' : '+$scope.PostDataResponse));
+            element.appendChild(h4tag);	
             el.insertBefore(element, el.firstChild);
         })
         .error(function (data, status, header, config) {

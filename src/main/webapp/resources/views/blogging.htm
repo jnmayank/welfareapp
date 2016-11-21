@@ -2,18 +2,10 @@
 <form ng-submit="postYourFeed(feed)">
 	<label>Post your comment here</label>
 	<textarea rows="10" cols="50" ng-model="feed"
-		class="ng-pristine ng-valid"></textarea>
+		class="ng-pristine ng-valid" id="postarea"></textarea>
 	<!-- <input type="text" ng-model="feed" class="ng-pristine ng-valid"> -->
 	<input type="submit">
 </form>
-
-
-<!-- <ul tagged-infinite-scroll="getMore()" tagged-infinite-scroll-disabled="fetching || disabled">
-      <li ng-repeat="item in items">
-        Comment : {{ item.postData }}
-        Comment Date: {{item.postCreationDate}}
-      </li>
-</ul> -->
 
 <div id='base-div' infinite-scroll="getMoreData()">
     <div ng-repeat="item in items" class="userContainer" id="{{ 'object-' + $index }}">
