@@ -54,26 +54,3 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
 	  }
 	  
 });
-
-/*app.factory('WelfareApp', function($http,XhrService) {
-	  var WelfareData = function() {
-	    this.items = [];
-	    this.busy = false;
-	    this.after = 't3-0';
-	  };
-	  WelfareData.prototype.nextPage = function() {
-	    if (this.busy) return;
-	    this.busy = true;
-	    var url = XhrService.getServiceBaseUrl()+"welfareservice/getBloggerData?after=" + this.after+"&jsonp=JSON_CALLBACK";
-	    $http.jsonp(url).success(function(data) {
-	    console.log(data);	
-	      var items = data.data.children;
-	      for (var i = 0; i < items.length; i++) {
-	        this.items.push(items[i].data);
-	      }
-	      this.after = "t3-" + this.items[this.items.length - 1].id;
-	      this.busy = false; 
-	    }.bind(this));
-	  };
-	  return WelfareData;
-});*/
