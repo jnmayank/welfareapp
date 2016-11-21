@@ -52,8 +52,5 @@ app.controller('BloggingCtrl', function($scope,$http,XhrService) {
 		        $scope.disabled = true; // Disable further calls if there are no more items
 		      }
 		    });
-		  
-	  
 	  }
-	  
 });
