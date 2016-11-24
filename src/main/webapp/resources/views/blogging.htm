@@ -1,4 +1,20 @@
 <h1>Welcome To blogged feeds</h1>
+
+<div class="md-padding" id="popupContainer" ng-cloak>
+  <p class="inset">
+    Open a dialog over the app's content. Press escape or click outside to close the dialog and
+    send focus back to the triggering button.
+  </p>
+
+  <div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
+    <md-button class="md-primary md-raised" ng-click="showPrompt($event)"  >
+      Prompt Dialog
+    </md-button>
+  </div>
+</div>
+
+
+
 <form ng-submit="postYourFeed(feed)">
 	<label>Post your comment here</label>
 	<textarea rows="10" cols="50" ng-model="feed"
@@ -12,18 +28,3 @@
         <h4>{{item.postCreationDate}} {{item.postData}}</h4>
     </div>
 </div>
-
-<!-- <div infinite-scroll='welfareData.nextPage()' infinite-scroll-disabled='welfareData.busy' infinite-scroll-distance='1'>
-    <div ng-repeat='item in welfareData.items'>
-      <span class='postData'>{{item.postData}}</span>
-      <span class='postDate'>
-        {{item.postDate}}
-      </span>
-      <div style='clear: both;'></div>
-    </div>
-    <div ng-show='welfareData.busy'>Loading data...</div>
-  </div> -->
-
-<!-- <span>Post Data: {{PostDataResponse}}</span>
-
-<span>Post Date: {{postDate}}</span> -->
