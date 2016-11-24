@@ -18,7 +18,6 @@ app.controller('BloggingCtrl', function($scope, $http, $mdDialog, XhrService) {
 				function(data, status, headers, config) {
 					$scope.PostDataResponse = data.object.postData;
 					$scope.postDate = data.object.postCreationDate;
-					document.getElementById("postarea").value = "";
 					var el = document.getElementById('base-div');
 					var element = document.createElement("div");
 					element.className = 'userContainer';
@@ -64,16 +63,17 @@ app.controller('BloggingCtrl', function($scope, $http, $mdDialog, XhrService) {
 	
 	$scope.showPrompt = function(ev) {
 		// Appending dialog to document.body to cover sidenav in docs app
-		var confirm = $mdDialog.prompt().title('What would you name your dog?')
-				.textContent('Bowser is a common name.')
-				.placeholder('Dog name').ariaLabel('Dog name').initialValue(
-						'Buddy').targetEvent(ev).ok('Okay!').cancel(
-						'I\'m a cat person');
+		var confirm = $mdDialog.prompt().title('What would you like to Post?')
+				.textContent('Enter Your Comment in Text Area')
+				.placeholder(' ').ariaLabel('Your Post').initialValue(
+						' ').targetEvent(ev).ok('Post Data').cancel(
+						'Cancel');
 
 		$mdDialog.show(confirm).then(function(result) {
-			$scope.status = 'You decided to name your dog ' + result + '.';
+			//$scope.status = 'You decided to Post ' + result + '.';
+			$scope.postYourFeed(result);
 		}, function() {
-			$scope.status = 'You didn\'t name your dog.';
+			$scope.status = 'You didn\'t post any content.';
 		});
 	};
 });
