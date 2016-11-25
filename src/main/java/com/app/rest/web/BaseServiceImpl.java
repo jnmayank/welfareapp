@@ -4,31 +4,38 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.stereotype.Service;
+
+import com.app.elastic.repo.UserRepositoryService;
+import com.app.elastic.repo.UserWelfareAccountVO;
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
-import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.PostDataVO;
-import com.app.rest.vo.UserWelfareAccountVO;
+import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.WelfareVO;
 
 /**
-Time   : 12:53:28 am
-created: 14-Nov-2016
-author : nitesh
-**/
+ * Time : 12:53:28 am created: 14-Nov-2016 author : nitesh
+ **/
 
 @Service("baseService")
-public class BaseServiceImpl implements BaseService{
+public class BaseServiceImpl implements BaseService {
+
+	@Autowired
+	UserRepositoryService userRepoService;
 
 	@Override
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
 		AccountCreationResponseVO accountCreationResponseVO = new AccountCreationResponseVO();
 		accountCreationResponseVO.setResultmessage("success");
-		WelfareVO<AccountCreationResponseVO> response = new WelfareVO<AccountCreationResponseVO>(accountCreationResponseVO, false);
+		String responseMessage = userRepoService.createUser(userWelfareAccountVO);
+		accountCreationResponseVO.setResultmessage(responseMessage);
+		WelfareVO<AccountCreationResponseVO> response = new WelfareVO<AccountCreationResponseVO>(
+				accountCreationResponseVO, false);
 		return response;
 	}
-
 
 	@Override
 	public WelfareVO<PostResponseVO> feedNewPost(PostDataVO postDataVO) {
@@ -40,17 +47,16 @@ public class BaseServiceImpl implements BaseService{
 		return response;
 	}
 
-
 	@Override
 	public WelfareVO<BlogDataPostScrollVO> getPostScroll(String after) {
 		BlogDataPostScrollVO bvo = new BlogDataPostScrollVO();
 		List<PostResponseVO> postDataList = new ArrayList<>();
 		bvo.setPostDataList(postDataList);
-		
+
 		Integer data = Integer.parseInt(after);
-		for(int i=0;i<9;i++){
-			PostResponseVO pvo =  new PostResponseVO();
-			pvo.setPostData("postdata"+(data+i));
+		for (int i = 0; i < 9; i++) {
+			PostResponseVO pvo = new PostResponseVO();
+			pvo.setPostData("postdata" + (data + i));
 			pvo.setPostCreationDate(new Date());
 			postDataList.add(pvo);
 		}

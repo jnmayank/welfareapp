@@ -1,79 +1,113 @@
-package com.app.rest.vo;
+package com.app.elastic.repo;
+
+import java.io.Serializable;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
-Time   : 12:57:48 am
-created: 14-Nov-2016
-author : nitesh
+ * Time : 12:57:48 am created: 14-Nov-2016 author : nitesh
+ * 
  * @param <T>
-**/
+ **/
 
-public class UserWelfareAccountVO {
+@Document(indexName = "resource", type = "userWelfareAccountVO")
+public class UserWelfareAccountVO	 {
 	private String username;
 	private String password;
 	private String email;
-	private String dateofBirth;
+	private String dateOfBirth;
+	@Id
+	private String id;
+
 	/**
 	 * @return the username
 	 */
 	public String getUsername() {
 		return username;
 	}
+
 	/**
-	 * @param username the username to set
+	 * @param username
+	 *            the username to set
 	 */
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	/**
 	 * @return the password
 	 */
 	public String getPassword() {
 		return password;
 	}
+
 	/**
-	 * @param password the password to set
+	 * @param password
+	 *            the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	/**
 	 * @return the email
 	 */
 	public String getEmail() {
 		return email;
 	}
+
 	/**
-	 * @param email the email to set
+	 * @param email
+	 *            the email to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	/**
-	 * @return the dateofBirth
-	 */
-	public String getDateofBirth() {
-		return dateofBirth;
+
+	public String getId() {
+		return id;
 	}
-	/**
-	 * @param dateofBirth the dateofBirth to set
-	 */
-	public void setDateofBirth(String dateofBirth) {
-		this.dateofBirth = dateofBirth;
+
+	public void setId(String id) {
+		this.id = id;
 	}
-	/* (non-Javadoc)
+
+	/**
+	 * @return the dateOfBirth
+	 */
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	/**
+	 * @param dateOfBirth
+	 *            the dateOfBirth to set
+	 */
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dateofBirth == null) ? 0 : dateofBirth.hashCode());
+		result = prime * result + ((dateOfBirth == null) ? 0 : dateOfBirth.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -88,11 +122,11 @@ public class UserWelfareAccountVO {
 			return false;
 		}
 		UserWelfareAccountVO other = (UserWelfareAccountVO) obj;
-		if (dateofBirth == null) {
-			if (other.dateofBirth != null) {
+		if (dateOfBirth == null) {
+			if (other.dateOfBirth != null) {
 				return false;
 			}
-		} else if (!dateofBirth.equals(other.dateofBirth)) {
+		} else if (!dateOfBirth.equals(other.dateOfBirth)) {
 			return false;
 		}
 		if (email == null) {
@@ -100,6 +134,13 @@ public class UserWelfareAccountVO {
 				return false;
 			}
 		} else if (!email.equals(other.email)) {
+			return false;
+		}
+		if (id == null) {
+			if (other.id != null) {
+				return false;
+			}
+		} else if (!id.equals(other.id)) {
 			return false;
 		}
 		if (password == null) {
@@ -118,5 +159,16 @@ public class UserWelfareAccountVO {
 		}
 		return true;
 	}
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "UserWelfareAccountVO [username=" + username + ", password=" + password + ", email=" + email
+				+ ", dateOfBirth=" + dateOfBirth + ", id=" + id + "]";
+	}
+
 }
