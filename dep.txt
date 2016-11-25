@@ -1,108 +1,663 @@
-			
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-tx</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.quartz-scheduler</groupId>
-				<artifactId>quartz</artifactId>
-				<version>2.2.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context-support</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2</version>
-			</dependency>
-			<dependency>
-				<groupId>aopalliance</groupId>
-				<artifactId>aopalliance</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-			<dependency>
-				<groupId>javax.ws.rs</groupId>
-				<artifactId>javax.ws.rs-api</artifactId>
-				<version>2.0</version>
-			</dependency>
-			<dependency>
-				<groupId>com.restfb</groupId>
-				<artifactId>restfb</artifactId>
-				<version>1.19.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>4.2.4.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-rt-frontend-jaxws</artifactId>
-				<version>3.0.0-milestone1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
-				<version>3.0.0-milestone1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-rt-transports-http</artifactId>
-				<version>3.0.0-milestone1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-rt-rs-client</artifactId>
-				<version>3.0.0-milestone1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-rt-rs-service-description</artifactId>
-				<version>3.0.0-milestone1</version>
-			</dependency>
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>5.1.38</version>
-			</dependency>
+10:02:56,513 DEBUG localhost-startStop-1 xml.DefaultNamespaceHandlerResolver:157 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.w3.org/2006/07/ws-policy=org.apache.cxf.ws.policy.spring.PolicyNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://cxf.apache.org/jaxws=org.apache.cxf.jaxws.spring.NamespaceHandler, http://www.springframework.org/schema/data/keyvalue=org.springframework.data.keyvalue.repository.config.KeyValueRepositoryNameSpaceHandler, http://cxf.apache.org/policy=org.apache.cxf.ws.policy.spring.NamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://cxf.apache.org/jaxrs-client=org.apache.cxf.jaxrs.client.spring.NamespaceHandler, http://www.springframework.org/schema/data/elasticsearch=org.springframework.data.elasticsearch.config.ElasticsearchNamespaceHandler, http://cxf.apache.org/transports/http/configuration=org.apache.cxf.transport.http.spring.NamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/data/repository=org.springframework.data.repository.config.RepositoryNameSpaceHandler, http://cxf.apache.org/ws/addressing=org.apache.cxf.ws.addressing.spring.NamespaceHandler, http://cxf.apache.org/simple=org.apache.cxf.frontend.spring.NamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler, http://cxf.apache.org/core=org.apache.cxf.bus.spring.NamespaceHandler, http://cxf.apache.org/jaxrs=org.apache.cxf.jaxrs.spring.NamespaceHandler, http://schemas.xmlsoap.org/ws/2004/09/policy=org.apache.cxf.ws.policy.spring.PolicyNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.w3.org/ns/ws-policy=org.apache.cxf.ws.policy.spring.PolicyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://cxf.apache.org/bindings/soap=org.apache.cxf.binding.soap.spring.NamespaceHandler}
+10:02:56,717 DEBUG localhost-startStop-1 xml.BeanDefinitionParserDelegate:451 - No XML 'id' specified - using 'elasticsearchTemplate' as bean name and [] as aliases
+10:02:56,746 DEBUG localhost-startStop-1 xml.BeanDefinitionParserDelegate:1473 - Using generated bean name [cxf:logging#41e130cb] for nested custom element 'cxf:logging'
+10:02:56,757 DEBUG localhost-startStop-1 xml.XmlBeanDefinitionReader:224 - Loaded 20 bean definitions from location pattern [/WEB-INF/spring/rest-context.xml]
+10:02:56,771 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:874 - Registering scope 'request' with implementation [org.springframework.web.context.request.RequestScope@2a02261d]
+10:02:56,777 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:874 - Registering scope 'session' with implementation [org.springframework.web.context.request.SessionScope@3a26b06c]
+10:02:56,777 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:874 - Registering scope 'globalSession' with implementation [org.springframework.web.context.request.SessionScope@8a995a7]
+10:02:56,778 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:874 - Registering scope 'application' with implementation [org.springframework.web.context.support.ServletContextScope@3b23ec98]
+10:02:56,800 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+10:02:56,800 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+10:02:56,817 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+10:02:56,819 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+10:02:56,889 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor'
+10:02:56,889 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor'
+10:02:56,890 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor' to allow for resolving potential circular references
+10:02:56,890 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor'
+10:02:56,893 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+10:02:56,894 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+10:02:56,896 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+10:02:56,897 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+10:02:56,897 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+10:02:56,898 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+10:02:56,898 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+10:02:56,898 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+10:02:56,899 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+10:02:56,899 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+10:02:56,901 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+10:02:56,902 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+10:02:56,906 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor'
+10:02:56,907 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor'
+10:02:56,909 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor' to allow for resolving potential circular references
+10:02:56,909 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor'
+10:02:56,909 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+10:02:56,909 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+10:02:56,910 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+10:02:56,910 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+10:02:56,910 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+10:02:56,911 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+10:02:56,911 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+10:02:56,911 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+10:02:56,912 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.apache.cxf.bus.spring.Jsr250BeanPostProcessor'
+10:02:56,912 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.apache.cxf.bus.spring.Jsr250BeanPostProcessor'
+10:02:56,920 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.apache.cxf.bus.spring.Jsr250BeanPostProcessor' to allow for resolving potential circular references
+10:02:56,938 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.apache.cxf.bus.spring.Jsr250BeanPostProcessor'
+10:02:56,938 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.apache.cxf.bus.spring.BusExtensionPostProcessor'
+10:02:56,939 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.apache.cxf.bus.spring.BusExtensionPostProcessor'
+10:02:56,940 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.apache.cxf.bus.spring.BusExtensionPostProcessor' to allow for resolving potential circular references
+10:02:56,944 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.apache.cxf.bus.spring.BusExtensionPostProcessor'
+10:02:56,955 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:741 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@27432135: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,userRepoService,baseService,org.springframework.data.elasticsearch.repository.config.ElasticsearchRepositoryConfigExtension#0,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor,userRepository,client,elasticsearchTemplate,cxf.config0,jsonProvider,restContainer,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; root of factory hierarchy
+10:02:56,956 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'cxf'
+10:02:56,956 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'cxf'
+10:02:57,029 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'cxf' to allow for resolving potential circular references
+10:02:57,061 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'cxf:logging#41e130cb'
+10:02:57,101 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'cxf:logging#41e130cb'
+10:02:57,164 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'cxf'
+10:02:57,164 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor'
+10:02:57,164 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.apache.cxf.bus.spring.Jsr250BeanPostProcessor'
+10:02:57,165 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.apache.cxf.bus.spring.BusExtensionPostProcessor'
+10:02:57,165 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+10:02:57,165 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+10:02:57,166 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+10:02:57,166 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+10:02:57,167 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+10:02:57,167 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+10:02:57,170 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
+10:02:57,174 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+10:02:57,174 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+10:02:57,174 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+10:02:57,175 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
+10:02:57,179 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+10:02:57,179 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userRepoService'
+10:02:57,179 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'userRepoService'
+10:02:57,185 DEBUG localhost-startStop-1 annotation.InjectionMetadata:72 - Registered injected element on class [com.app.elastic.repo.UserRepositoryService]: AutowiredFieldElement for private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository
+10:02:57,185 DEBUG localhost-startStop-1 annotation.InjectionMetadata:72 - Registered injected element on class [com.app.elastic.repo.UserRepositoryService]: AutowiredFieldElement for private org.springframework.data.elasticsearch.core.ElasticsearchTemplate com.app.elastic.repo.UserRepositoryService.elasticsearchTemplate
+10:02:57,186 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'userRepoService' to allow for resolving potential circular references
+10:02:57,189 DEBUG localhost-startStop-1 annotation.InjectionMetadata:86 - Processing injected element of bean 'userRepoService': AutowiredFieldElement for private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository
+10:02:57,194 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userRepository'
+10:02:57,195 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'userRepository'
+10:02:57,251 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'userRepository' to allow for resolving potential circular references
+10:02:57,272 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean '(inner bean)#6da3a636'
+10:02:57,306 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean '(inner bean)#61b8419c'
+10:02:57,320 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:1620 - Invoking afterPropertiesSet() on bean with name '(inner bean)#61b8419c'
+10:02:57,321 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean '(inner bean)#61b8419c'
+10:02:57,344 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean '(inner bean)#6da3a636'
+10:02:57,344 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean '(inner bean)#3f68851a'
+10:02:57,353 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean '(inner bean)#3f68851a'
+10:02:57,354 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'elasticsearchTemplate'
+10:02:57,354 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'elasticsearchTemplate'
+10:02:57,379 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'client'
+10:02:57,379 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:448 - Creating instance of bean 'client'
+10:02:57,381 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'client' to allow for resolving potential circular references
+10:02:57,387 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:1620 - Invoking afterPropertiesSet() on bean with name 'client'
+10:02:57,675  INFO localhost-startStop-1 elasticsearch.node:141 - [Bedlam] version[1.5.2], pid[3367], build[62ff986/2015-04-27T09:21:06Z]
+10:02:57,675  INFO localhost-startStop-1 elasticsearch.node:143 - [Bedlam] initializing ...
+10:02:57,682  INFO localhost-startStop-1 elasticsearch.plugins:151 - [Bedlam] loaded [], sites []
+10:02:59,928  INFO localhost-startStop-1 elasticsearch.node:213 - [Bedlam] initialized
+10:02:59,929  INFO localhost-startStop-1 elasticsearch.node:232 - [Bedlam] starting ...
+10:02:59,932  INFO localhost-startStop-1 elasticsearch.transport:155 - [Bedlam] bound_address {local[1]}, publish_address {local[1]}
+10:02:59,976  INFO localhost-startStop-1 elasticsearch.discovery:85 - [Bedlam] elasticsearch/4R3XaMCnQoiwyNNhM6aIMg
+10:02:59,979  INFO elasticsearch[Bedlam][clusterService#updateTask][T#1] cluster.service:437 - [Bedlam] master {new [Bedlam][4R3XaMCnQoiwyNNhM6aIMg][nitesh-HP-15-Notebook-PC][local[1]]{local=true}}, removed {[Bedlam][lXtfwqB5S1OrhegMJoh9TA][nitesh-HP-15-Notebook-PC][local[1]]{local=true},}, reason: local-disco-initial_connect(master)
+10:03:00,189  INFO localhost-startStop-1 elasticsearch.http:91 - [Bedlam] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.10:9200]}
+10:03:00,189  INFO localhost-startStop-1 elasticsearch.node:267 - [Bedlam] started
+10:03:00,190 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'client'
+10:03:00,215  INFO elasticsearch[Bedlam][clusterService#updateTask][T#1] elasticsearch.gateway:272 - [Bedlam] recovered [0] indices into cluster_state
+10:03:00,358 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:529 - Eagerly caching bean 'elasticsearchTemplate' to allow for resolving potential circular references
+10:03:00,374 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:484 - Finished creating instance of bean 'elasticsearchTemplate'
+10:03:00,375 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:1620 - Invoking afterPropertiesSet() on bean with name 'userRepository'
+10:03:09,997  INFO elasticsearch[Bedlam][clusterService#updateTask][T#1] cluster.metadata:453 - [Bedlam] [resource] creating index, cause [api], templates [], shards [5]/[1], mappings []
+10:03:10,465  INFO elasticsearch[Bedlam][clusterService#updateTask][T#1] cluster.metadata:566 - [Bedlam] [resource] create_mapping [userWelfareAccountVO]
+10:03:10,844 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:568 - Retrieved dependent beans for bean '(inner bean)#6da3a636': [userRepository]
+10:03:10,844 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:568 - Retrieved dependent beans for bean '(inner bean)#61b8419c': [(inner bean)#6da3a636]
+10:03:10,845  WARN localhost-startStop-1 support.XmlWebApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepoService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+10:03:10,846 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:512 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@27432135: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,userRepoService,baseService,org.springframework.data.elasticsearch.repository.config.ElasticsearchRepositoryConfigExtension#0,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor,userRepository,client,elasticsearchTemplate,cxf.config0,jsonProvider,restContainer,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; root of factory hierarchy
+10:03:10,846 DEBUG localhost-startStop-1 support.DisposableBeanAdapter:249 - Invoking destroy() on bean with name 'client'
+10:03:10,846  INFO localhost-startStop-1 client.NodeClientFactoryBean:90 - Closing elasticSearch  client
+10:03:10,847 DEBUG localhost-startStop-1 support.DisposableBeanAdapter:327 - Invoking destroy method 'shutdown' on bean with name 'cxf'
+10:03:10,848 DEBUG localhost-startStop-1 support.DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'cxf:logging#41e130cb': [cxf]
+10:03:10,851 ERROR localhost-startStop-1 context.ContextLoader:353 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepoService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4728)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1399)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 22 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 24 more
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:75)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:327)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:307)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:270)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:241)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:76)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:235)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.buildTree(PartTree.java:373)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:353)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:87)
+	at org.springframework.data.elasticsearch.repository.query.ElasticsearchPartQuery.<init>(ElasticsearchPartQuery.java:44)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory$ElasticsearchQueryLookupStrategy.resolveQuery(ElasticsearchRepositoryFactory.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:416)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:206)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:251)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:237)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:55)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 34 more
+Nov 25, 2016 10:03:10 AM org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepoService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4728)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1399)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.app.elastic.repo.UserRepository com.app.elastic.repo.UserRepositoryService.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 22 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 24 more
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property name found for type UserWelfareAccountVO!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:75)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:327)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:307)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:270)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:241)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:76)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:235)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.buildTree(PartTree.java:373)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:353)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:87)
+	at org.springframework.data.elasticsearch.repository.query.ElasticsearchPartQuery.<init>(ElasticsearchPartQuery.java:44)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory$ElasticsearchQueryLookupStrategy.resolveQuery(ElasticsearchRepositoryFactory.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:416)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:206)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:251)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:237)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:55)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 34 more
 
-			<dependency>
-				<groupId>org.codehaus.jackson</groupId>
-				<artifactId>jackson-jaxrs</artifactId>
-				<version>1.9.13</version>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.6.2</version>
-			</dependency>
+Nov 25, 2016 10:03:10 AM org.apache.catalina.core.StandardContext startInternal
+SEVERE: Error listenerStart
+Nov 25, 2016 10:03:10 AM org.apache.catalina.core.StandardContext startInternal
+SEVERE: Context [/angularjs] startup failed due to previous errors
+Nov 25, 2016 10:03:10 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+Nov 25, 2016 10:03:10 AM org.apache.catalina.core.ApplicationContext log
+INFO: Shutting down log4j
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][[timer]]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.sleep(Native Method)
+ org.elasticsearch.threadpool.ThreadPool$EstimatedTimeThread.run(ThreadPool.java:576)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][scheduler][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][master_mapping_updater]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:734)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.poll(LinkedTransferQueue.java:1277)
+ org.elasticsearch.cluster.action.index.MappingUpdatedAction$MasterMappingUpdater.run(MappingUpdatedAction.java:382)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][[ttl_expire]]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2163)
+ org.elasticsearch.indices.ttl.IndicesTTLService$Notifier.await(IndicesTTLService.java:325)
+ org.elasticsearch.indices.ttl.IndicesTTLService$PurgerThread.run(IndicesTTLService.java:147)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][clusterService#updateTask][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.FileDispatcherImpl.force0(Native Method)
+ sun.nio.ch.FileDispatcherImpl.force(FileDispatcherImpl.java:76)
+ sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:387)
+ org.apache.lucene.util.IOUtils.fsync(IOUtils.java:316)
+ org.elasticsearch.gateway.local.state.meta.MetaDataStateFormat.write(MetaDataStateFormat.java:122)
+ org.elasticsearch.gateway.local.state.shards.LocalGatewayShardsState.writeShardState(LocalGatewayShardsState.java:193)
+ org.elasticsearch.gateway.local.state.shards.LocalGatewayShardsState.clusterChanged(LocalGatewayShardsState.java:145)
+ org.elasticsearch.gateway.local.LocalGateway.clusterChanged(LocalGateway.java:216)
+ org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:467)
+ org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:188)
+ org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:158)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][generic][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.FileDispatcherImpl.force0(Native Method)
+ sun.nio.ch.FileDispatcherImpl.force(FileDispatcherImpl.java:76)
+ sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:387)
+ org.apache.lucene.util.IOUtils.fsync(IOUtils.java:316)
+ org.apache.lucene.store.FSDirectory.fsync(FSDirectory.java:410)
+ org.apache.lucene.store.FSDirectory.sync(FSDirectory.java:305)
+ org.apache.lucene.store.FileSwitchDirectory.sync(FileSwitchDirectory.java:167)
+ org.apache.lucene.store.FilterDirectory.sync(FilterDirectory.java:74)
+ org.apache.lucene.store.FilterDirectory.sync(FilterDirectory.java:74)
+ org.apache.lucene.store.FilterDirectory.sync(FilterDirectory.java:74)
+ org.apache.lucene.index.SegmentInfos.writeSegmentsGen(SegmentInfos.java:297)
+ org.apache.lucene.index.SegmentInfos.finishCommit(SegmentInfos.java:1115)
+ org.apache.lucene.index.IndexWriter.finishCommit(IndexWriter.java:3160)
+ org.apache.lucene.index.IndexWriter.commitInternal(IndexWriter.java:3141)
+ org.apache.lucene.index.IndexWriter.commit(IndexWriter.java:3101)
+ org.elasticsearch.index.engine.InternalEngine.commitIndexWriter(InternalEngine.java:1226)
+ org.elasticsearch.index.engine.InternalEngine.createSearcherManager(InternalEngine.java:182)
+ org.elasticsearch.index.engine.InternalEngine.<init>(InternalEngine.java:143)
+ org.elasticsearch.index.engine.InternalEngineFactory.newReadWriteEngine(InternalEngineFactory.java:32)
+ org.elasticsearch.index.shard.IndexShard.newEngine(IndexShard.java:1262)
+ org.elasticsearch.index.shard.IndexShard.createNewEngine(IndexShard.java:1257)
+ org.elasticsearch.index.shard.IndexShard.prepareForTranslogRecovery(IndexShard.java:784)
+ org.elasticsearch.index.gateway.local.LocalIndexShardGateway.recover(LocalIndexShardGateway.java:226)
+ org.elasticsearch.index.gateway.IndexShardGatewayService$1.run(IndexShardGatewayService.java:112)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][riverClusterService#updateTask][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][management][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1269)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#1]{New I/O worker #1}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#2]{New I/O worker #2}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#3]{New I/O worker #3}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#4]{New I/O worker #4}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#5]{New I/O worker #5}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#6]{New I/O worker #6}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#7]{New I/O worker #7}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#8]{New I/O worker #8}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:434)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+ org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_boss][T#1]{New I/O server boss #9}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+ sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+ org.elasticsearch.common.netty.channel.socket.nio.NioServerBoss.select(NioServerBoss.java:163)
+ org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+ org.elasticsearch.common.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+ org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+ org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][listener][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1269)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][generic][T#2]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][generic][T#3]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][generic][T#4]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][listener][T#2]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1269)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][warmer][T#1]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:734)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.poll(LinkedTransferQueue.java:1277)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][warmer][T#2]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:734)
+ java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+ java.util.concurrent.LinkedTransferQueue.poll(LinkedTransferQueue.java:1277)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [angularjs] created a ThreadLocal with key of type [org.elasticsearch.common.inject.InjectorImpl$1] (value [org.elasticsearch.common.inject.InjectorImpl$1@4fda6a12]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@27edceb9]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [angularjs] created a ThreadLocal with key of type [org.elasticsearch.common.inject.InjectorImpl$1] (value [org.elasticsearch.common.inject.InjectorImpl$1@4fda6a12]) and a value of type [java.lang.Object[]] (value [[Ljava.lang.Object;@3af4faf9]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Nov 25, 2016 10:03:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/host-manager
+Nov 25, 2016 10:03:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/host-manager has finished in 68 ms
+Nov 25, 2016 10:03:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/ROOT
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/ROOT has finished in 19 ms
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/docs
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/docs has finished in 21 ms
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/manager
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/manager has finished in 34 ms
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/examples
+Nov 25, 2016 10:03:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 25, 2016 10:03:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/nitesh/apps/eclipsetomcat/apache-tomcat-8.0.21/webapps/examples has finished in 413 ms
+Nov 25, 2016 10:03:11 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8081"]
+Nov 25, 2016 10:03:11 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 25, 2016 10:03:11 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 20147 ms
+Nov 25, 2016 10:03:29 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.indices.memory.IndexingMemoryController$ShardStatusChangeType]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.indices.memory.IndexingMemoryController$ShardStatusChangeType]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1327)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1313)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1196)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1157)
+	at org.elasticsearch.indices.memory.IndexingMemoryController$ShardsIndicesStatusChecker.run(IndexingMemoryController.java:158)
+	at org.elasticsearch.threadpool.ThreadPool$LoggingRunnable.run(ThreadPool.java:498)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+log4j:WARN No appenders could be found for logger (org.elasticsearch.threadpool).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Nov 25, 2016 10:03:29 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.cluster.InternalClusterInfoService$ClusterInfoUpdateJob]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.cluster.InternalClusterInfoService$ClusterInfoUpdateJob]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1327)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1313)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1196)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1157)
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.run(InternalClusterInfoService.java:233)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 25, 2016 10:03:59 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.indices.memory.IndexingMemoryController$ShardStatusChangeType]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.elasticsearch.indices.memory.IndexingMemoryController$ShardStatusChangeType]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1327)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1313)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1196)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1157)
+	at org.elasticsearch.indices.memory.IndexingMemoryController$ShardsIndicesStatusChecker.run(IndexingMemoryController.java:158)
+	at org.elasticsearch.threadpool.ThreadPool$LoggingRunnable.run(ThreadPool.java:498)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
