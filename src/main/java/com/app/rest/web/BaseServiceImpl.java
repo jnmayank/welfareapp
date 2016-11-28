@@ -63,4 +63,14 @@ public class BaseServiceImpl implements BaseService {
 		return wvoResponse;
 	}
 
+	@Override
+	public WelfareVO<AccountCreationResponseVO> getAllAccountData() {
+		userRepositoryService.findAllUser();
+		AccountCreationResponseVO aco = new AccountCreationResponseVO();
+		WelfareVO<AccountCreationResponseVO> wresp = new WelfareVO<AccountCreationResponseVO>(aco, false);
+		return wresp;
+	}
+
+	
+	
 }

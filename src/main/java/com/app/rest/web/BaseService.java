@@ -42,6 +42,9 @@ public interface BaseService {
 	@Path("/getMoreData")
 	public WelfareVO<BlogDataPostScrollVO> getPostScroll(@QueryParam("after")String after);
 	
-	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getAllUsers")
+	public WelfareVO<AccountCreationResponseVO> getAllAccountData();
 	
 }

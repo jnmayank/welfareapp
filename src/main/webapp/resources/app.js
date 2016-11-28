@@ -20,6 +20,10 @@ app.config(function($routeProvider) {
     	templateUrl: "./resources/views/blogging.htm",
     	controller: "BloggingCtrl"
     });
+    /*.when("/dashboard",{
+    	templateUrl: "./resources/views/dashboard.htm",
+    	controller: "BloggingCtrl"
+    });*/
     /*.otherwise({
     	redirectTo: '/'
     });*/
