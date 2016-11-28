@@ -5,11 +5,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.stereotype.Service;
 
-import com.app.elastic.repo.UserRepositoryService;
-import com.app.elastic.repo.UserWelfareAccountVO;
+import app.elastic.repo.UserWelfareAccountVO;
+
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
 import com.app.rest.vo.PostDataVO;
@@ -24,13 +23,13 @@ import com.app.rest.vo.WelfareVO;
 public class BaseServiceImpl implements BaseService {
 
 	@Autowired
-	UserRepositoryService userRepoService;
+	private UserRepositoryService userRepositoryService;
 
 	@Override
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
 		AccountCreationResponseVO accountCreationResponseVO = new AccountCreationResponseVO();
 		accountCreationResponseVO.setResultmessage("success");
-		String responseMessage = userRepoService.createUser(userWelfareAccountVO);
+		String responseMessage = userRepositoryService.createUser(userWelfareAccountVO);
 		accountCreationResponseVO.setResultmessage(responseMessage);
 		WelfareVO<AccountCreationResponseVO> response = new WelfareVO<AccountCreationResponseVO>(
 				accountCreationResponseVO, false);

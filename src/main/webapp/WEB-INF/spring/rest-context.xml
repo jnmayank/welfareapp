@@ -21,13 +21,13 @@
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.app.*" />
-	<elasticsearch:repositories base-package="com.app.elastic.repo" />
+	<elasticsearch:repositories base-package="app.elastic.repo" />
 	<elasticsearch:node-client id="client" local="true" />
 	<bean name="elasticsearchTemplate"
 		class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
 		<constructor-arg name="client" ref="client" />
 	</bean>
+	<context:component-scan base-package="com.app.*" />
 	<!-- CXF BUS FOR LOGGING -->
 	<cxf:bus>
 		<cxf:features>
