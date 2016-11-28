@@ -1,9 +1,13 @@
 package app.elastic.repo;
 
-import java.io.Serializable;
+import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+
+import com.app.handler.message.JsonDateSerializer;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
  * Time : 12:57:48 am created: 14-Nov-2016 author : nitesh
@@ -11,12 +15,13 @@ import org.springframework.data.elasticsearch.annotations.Document;
  * @param <T>
  **/
 
+@JsonAutoDetect
 @Document(indexName = "resource", type = "UserWelfareAccountVO")
 public class UserWelfareAccountVO	 {
 	private String username;
 	private String password;
 	private String email;
-	private String dateOfBirth;
+	private Date dateOfBirth;
 	
 	
 	@Id
@@ -78,7 +83,8 @@ public class UserWelfareAccountVO	 {
 	/**
 	 * @return the dateOfBirth
 	 */
-	public String getDateOfBirth() {
+	@JsonSerialize(using=JsonDateSerializer.class)
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
@@ -86,7 +92,7 @@ public class UserWelfareAccountVO	 {
 	 * @param dateOfBirth
 	 *            the dateOfBirth to set
 	 */
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 

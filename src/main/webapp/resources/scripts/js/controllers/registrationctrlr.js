@@ -9,12 +9,12 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 		console.log(email);
 		console.log(dateofBirth);
 		var serviceuri = XhrService.getServiceBaseUrl();
-
+		var dob = new Date(dateofBirth);
 		var data = {
 			'username' : username,
 			'password' : password,
 			'email' : email,
-			'dateofBirth' : dateofBirth,
+			'dateOfBirth' : dob,
 			'id': username
 		};
 
