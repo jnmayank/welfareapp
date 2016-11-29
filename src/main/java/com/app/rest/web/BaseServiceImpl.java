@@ -11,6 +11,8 @@ import app.elastic.repo.UserWelfareAccountVO;
 
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.LoginDataVO;
+import com.app.rest.vo.LoginResponseVO;
 import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.WelfareVO;
@@ -69,6 +71,15 @@ public class BaseServiceImpl implements BaseService {
 		AccountCreationResponseVO aco = new AccountCreationResponseVO();
 		WelfareVO<AccountCreationResponseVO> wresp = new WelfareVO<AccountCreationResponseVO>(aco, false);
 		return wresp;
+	}
+
+	@Override
+	public WelfareVO<LoginResponseVO> doLogin(LoginDataVO loginDataVO) {
+		boolean validateLoginCredentials = userRepositoryService.validateLoginCredentials(loginDataVO);
+		LoginResponseVO loginResponseVO = new LoginResponseVO();
+		loginResponseVO.setValidLogin(validateLoginCredentials);
+		WelfareVO<LoginResponseVO> response = new WelfareVO<LoginResponseVO>(loginResponseVO, false);
+		return response;
 	}
 
 	

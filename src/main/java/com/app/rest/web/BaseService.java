@@ -12,6 +12,8 @@ import app.elastic.repo.UserWelfareAccountVO;
 
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.LoginDataVO;
+import com.app.rest.vo.LoginResponseVO;
 import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.WelfareVO;
@@ -35,6 +37,12 @@ public interface BaseService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/feedNewPost")
 	public WelfareVO<PostResponseVO> feedNewPost(PostDataVO postDataVO);
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/login")
+	public WelfareVO<LoginResponseVO> doLogin(LoginDataVO loginDataVO);
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)

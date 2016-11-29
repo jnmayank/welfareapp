@@ -21,13 +21,19 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 @Component
 public class JsonDateSerializer extends JsonSerializer<Date> {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"MM-dd-yyyy");
+			"yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 
 	@Override
 	public void serialize(Date date, JsonGenerator gen,
 			SerializerProvider provider) throws IOException,
 			JsonProcessingException {
-		String formattedDate = dateFormat.format(date);
+		String formattedDate;
+		try{
+			formattedDate = dateFormat.format(date);
+		}catch(Exception e){
+			SimpleDateFormat sdf = new SimpleDateFormat();
+			formattedDate= sdf.format(date);
+		}
 		gen.writeString(formattedDate);
 	}
 }

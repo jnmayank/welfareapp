@@ -8,6 +8,8 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.IndexQuery;
 import org.springframework.stereotype.Component;
 
+import com.app.rest.vo.LoginDataVO;
+
 import app.elastic.repo.UserRepository;
 import app.elastic.repo.UserWelfareAccountVO;
 
@@ -29,13 +31,15 @@ public class UserRepositoryService {
 	}
 
 	public List<UserWelfareAccountVO> findUser(String username) {
-		List<UserWelfareAccountVO> userList = userRepository.findUserByUsername(username);
+		List<UserWelfareAccountVO> userList = userRepository
+				.findUserByUsername(username);
 		System.out.println("User list: " + userList);
 		return userList;
 	}
 
 	public List<UserWelfareAccountVO> findUserByDateOfBirth(Date dateOfBirth) {
-		List<UserWelfareAccountVO> userList = userRepository.findUserByDateOfBirth(dateOfBirth);
+		List<UserWelfareAccountVO> userList = userRepository
+				.findUserByDateOfBirth(dateOfBirth);
 		return userList;
 	}
 
@@ -47,11 +51,25 @@ public class UserRepositoryService {
 			idxQuery.setId(userWelfareAccountVO.getId());
 			idxQuery.setObject(userWelfareAccountVO);
 			elasticsearchTemplate.index(idxQuery);
-			elasticsearchTemplate.refresh(UserWelfareAccountVO.class,true);
+			elasticsearchTemplate.refresh(UserWelfareAccountVO.class, true);
 			return "success";
 		} catch (Exception e) {
-			System.err.println("Exception in creation of User " + e.getStackTrace());
+			System.err.println("Exception in creation of User "
+					+ e.getStackTrace());
 		}
 		return null;
 	}
+
+	public boolean validateLoginCredentials(LoginDataVO loginDataVO) {
+		List<UserWelfareAccountVO> findUser = findUser(loginDataVO
+				.getUserName());
+		for (UserWelfareAccountVO userWelfareAccountVO : findUser) {
+			if (userWelfareAccountVO.getPassword().equals(
+					loginDataVO.getPassword())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
