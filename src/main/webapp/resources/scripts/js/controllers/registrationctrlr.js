@@ -34,8 +34,8 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 		var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 		var monthelem = {id:'0',name:'Month'};
 		$scope.month.availableOptions.push(monthelem);
-		for(i in monthArray){
-			var elem = {id:i+1,name:monthArray[i]};
+		for(i = 1; i<monthArray.length;i++){ 
+			var elem = {id:i,name:monthArray[i]};
 			$scope.month.availableOptions.push(elem);
 		}
 		$scope.month.selectedOption={id:'0',name:'Month'}
