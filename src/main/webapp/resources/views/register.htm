@@ -1,30 +1,55 @@
 <h1>Registration Page</h1>
-<form ng-submit="register(username, password, email,dateofBirth)"
-	class="ng-scope ng-pristine ng-valid">
-	<label>User name</label> 
-	<input type="text" ng-model="username" class="ng-pristine ng-valid"> 
-	
-	<label>Password</label> 
-	<input type="password" ng-model="password" class="ng-pristine ng-valid">
-	<br />
-	
-	<label>Email</label> 
-	<input type="text" ng-model="email" class="ng-pristine ng-valid">
-	<br />
-	
-	<label>DOB</label> 
-	<input type="date" ng-model="dateofBirth" class="ng-pristine ng-valid">
-	<br />
-	
-	<input type="submit">
-	<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
-	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-	
-	{{PostDataResponse}}
-</form>
+<div id="registrationForm">
+	<form ng-submit="register(username, password, email, day, month, year)"
+		class="ng-scope ng-pristine ng-valid">
+		
+		<label>Username</label> &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="username"
+			class="ng-pristine ng-valid"> 
+		<br/>
+		
+		<label>Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" ng-model="password" class="ng-pristine ng-valid">
+		<br /> 
+		
+		<label>Email</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="email"
+			class="ng-pristine ng-valid"> 
+		<br />
+		<span>
+		
+		<select name="daySelect" id="daySelect"
+			ng-options="option.name for option in day.availableOptions track by option.id"
+			ng-model="day.selectedOption"></select> 
+			
+		<select name="monthSelect" id="monthSelect"
+			ng-options="option.name for option in month.availableOptions track by option.id"
+			ng-model="month.selectedOption"></select>	
+		
+		<select name="yearSelect" id="yearSelect"
+			ng-options="option.name for option in year.availableOptions track by option.id"
+			ng-model="year.selectedOption"></select>	
+	   
+	   <!-- <select aria-label="Days" name="birth_day" id="day" title="Day" ng-model="day">
+			
+		</select>
+		
+		<select aria-label="Months" name="birth_month" id="month" title="Month" ng-model="month">
+			
+		</select>
+		
+		<select aria-label="Years" name="birth_year" id="year" title="Year" ng-model="year">
+			
+		</select> -->
+		
+		
+		</span> 
+		<input type="submit">
+		<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+
+		{{PostDataResponse}}
+	</form>
+</div>
 
 <form ng-submit="getAllUsers()">
-	<label>Submit</label> 
-	<input type="submit">
+	<label>Submit</label> <input type="submit">
 </form>
 

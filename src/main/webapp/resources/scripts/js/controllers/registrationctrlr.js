@@ -2,14 +2,121 @@
  * Registration_Controller
  */
 app.controller('RegistrCtrl', function($scope, $http, XhrService) {
-	$scope.register = function(username, password, email, dateofBirth) {
+	
+	$scope.$on('$viewContentLoaded', function() {
+		$scope.style = document.createElement('link');
+		$scope.style.type = 'text/css';
+		$scope.style.href = 'resources/css/registration.css';
+		$scope.style.rel = 'stylesheet';
+		$scope.style = document.head.appendChild($scope.style);
+		
+		
+		
+		$scope.day = {
+			     availableOptions: [	       
+			     ],
+			     selectedOption: {} //This sets the default value of the select in the ui
+			     };
+		
+		for(i=0;i<32;i++){
+			//{id: '1', name: 'Option A'}
+			var elem = {id:i,name:i};
+			$scope.day.availableOptions.push(elem);
+		}
+		$scope.day.availableOptions[0].name='Day';
+		$scope.day.selectedOption={id:'0',name:'Day'}
+		
+		$scope.month = {
+			     availableOptions: [	       
+			     ],
+			     selectedOption: {} //This sets the default value of the select in the ui
+			     };
+		var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+		var monthelem = {id:'0',name:'Month'};
+		$scope.month.availableOptions.push(monthelem);
+		for(i in monthArray){
+			var elem = {id:i+1,name:monthArray[i]};
+			$scope.month.availableOptions.push(elem);
+		}
+		$scope.month.selectedOption={id:'0',name:'Month'}
+
+		
+		var currentYear = new Date().getFullYear();
+		$scope.year = {
+			     availableOptions: [	       
+			     ],
+			     selectedOption: {} //This sets the default value of the select in the ui
+			     };
+		var endYear = currentYear - 100;
+		var yearElem = {id:'0',name:'Year'}
+		$scope.year.availableOptions.push(yearElem);
+		for(i=currentYear;i>endYear;i--){
+			var elem = {id:i,name:i};
+			$scope.year.availableOptions.push(elem);
+		}
+		
+		$scope.year.selectedOption={id:'0',name:'Year'}
+		
+		/*var day = document.getElementById('day');
+		
+		var optele = document.createElement("option");
+		optele.setAttribute('value', '0');
+		optele.setAttribute('selected', 'true');
+		optele.innerHTML='Day';
+		day.appendChild(optele);
+		
+		for(i=1;i<=31;i++){
+			var optele = document.createElement("option");
+			optele.setAttribute('value', i);
+			optele.innerHTML=i;
+			day.appendChild(optele);
+		}
+		
+		var month = document.getElementById('month');
+		
+		optele = document.createElement("option");
+		optele.setAttribute('value', '0');
+		optele.setAttribute('selected', 'true');
+		optele.innerHTML='Month';
+		month.appendChild(optele);
+		var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+		for(i in monthArray){
+			var optele = document.createElement("option");
+			optele.setAttribute('value', monthArray);
+			optele.innerHTML=monthArray[i];
+			month.appendChild(optele);
+		}
+		
+		
+		var year = document.getElementById('year');
+		var currentYear = new Date().getFullYear();
+		optele = document.createElement("option");
+		optele.setAttribute('value', '0');
+		optele.setAttribute('selected', 'true');
+		optele.innerHTML='Year';
+		year.appendChild(optele);
+		
+		for(i=currentYear;i>1905;i--){
+			var optele = document.createElement("option");
+			optele.setAttribute('value', i);
+			optele.innerHTML=i;
+			year.appendChild(optele);
+		}*/
+	});
+
+	$scope.$on('$destroy', function() {
+		$scope._style.parentNode.removeChild($scope.style);
+		delete $scope._style;
+	});
+	
+	$scope.register = function(username, password, email, day, month, year) {
 		// $scope.
-		console.log(username);
-		console.log(password);
-		console.log(email);
-		console.log(dateofBirth);
 		var serviceuri = XhrService.getServiceBaseUrl();
-		var dob = new Date(dateofBirth);
+		var dob = new Date();
+		dob.setFullYear(year);
+		dob.setMonth(month);
+		dob.setDate(day);
+		console.log(dob);
 		var data = {
 			'username' : username,
 			'password' : password,
