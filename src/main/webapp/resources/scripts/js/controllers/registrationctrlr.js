@@ -32,13 +32,13 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 			     selectedOption: {} //This sets the default value of the select in the ui
 			     };
 		var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-		var monthelem = {id:'0',name:'Month'};
+		var monthelem = {id:'-1',name:'Month'};
 		$scope.month.availableOptions.push(monthelem);
 		for(i = 0; i<monthArray.length;i++){ 
-			var elem = {id:i+1,name:monthArray[i]};
+			var elem = {id:i,name:monthArray[i]};
 			$scope.month.availableOptions.push(elem);
 		}
-		$scope.month.selectedOption={id:'0',name:'Month'}
+		$scope.month.selectedOption={id:'-1',name:'Month'}
 
 		
 		var currentYear = new Date().getFullYear();
@@ -113,9 +113,12 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 		// $scope.
 		var serviceuri = XhrService.getServiceBaseUrl();
 		var dob = new Date();
-		dob.setFullYear(year);
-		dob.setMonth(month);
-		dob.setDate(day);
+		dob.setFullYear(year.selectedOption.id);
+		dob.setMonth(month.selectedOption.id);
+		dob.setDate(day.selectedOption.id);
+		dob.setHours(00);
+		dob.setMinutes(00);
+		dob.setSeconds(00);
 		console.log(dob);
 		var data = {
 			'username' : username,
