@@ -7,6 +7,9 @@ apply plugin: 'eclipse-wtp'
 project.group = 'angularjs'
 project.version = '1.0.0'
 
+compileJava {
+  sourceCompatibility = '1.8'
+}
 
 repositories {
     mavenCentral()
