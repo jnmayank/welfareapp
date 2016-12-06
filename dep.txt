@@ -367,7 +367,7 @@ WARNING: The web application [angularjs] appears to have started a thread named 
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
  java.lang.Thread.run(Thread.java:745)
 Nov 25, 2016 10:03:10 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
-WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#2]{New I/O worker #2}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+WARNING: The web application [angularjs] appears to have started a thread named [elasticsearch[Bedlam][http_server_worker][T#2]{New I/O worker #2}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of threa
  sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
  sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
  sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
