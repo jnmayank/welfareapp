@@ -13,8 +13,8 @@
 		<label>Email</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="email"
 			class="ng-pristine ng-valid"> 
 		<br />
+		<div class="dateselect">
 		<span>
-		
 		<select name="daySelect" id="daySelect"
 			ng-options="option.name for option in day.availableOptions track by option.id"
 			ng-model="day.selectedOption"></select> 
@@ -26,6 +26,15 @@
 		<select name="yearSelect" id="yearSelect"
 			ng-options="option.name for option in year.availableOptions track by option.id"
 			ng-model="year.selectedOption"></select>	
+	   </span>
+	   <br/> 
+	   </div>
+		<input type="submit">
+		<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+		
+		{{PostDataResponse}}
+	   
 	   
 	   <!-- <select aria-label="Days" name="birth_day" id="day" title="Day" ng-model="day">
 			
@@ -39,13 +48,6 @@
 			
 		</select> -->
 		
-		
-		</span> 
-		<input type="submit">
-		<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
-		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-
-		{{PostDataResponse}}
 	</form>
 </div>
 
