@@ -1,4 +1,4 @@
-# welfareapp https://travis-ci.org/niteshbisht/welfareapp.svg?branch=master
+# welfareapp <img src="https://travis-ci.org/niteshbisht/welfareapp.svg?branch=master" />
 welfareapp is created to share thoughts.
 
 #Tech Stack
