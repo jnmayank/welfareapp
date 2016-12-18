@@ -1,5 +1,40 @@
 @CHARSET "UTF-8";
 
+body {
+	color: #ff0025;
+	background-color: silver;
+	/*#f10025;*/
+}
+
+#navigdiv{
+	background-color: olive;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	width: 300px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+nav {
+    display: inline-table;
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav>ul>li{
+	float: left;
+}
+
+nav>ul>li>a{
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
 
 #registrationForm{
 	background-color: fuchsia;

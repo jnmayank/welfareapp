@@ -4,11 +4,11 @@
 app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 	
 	$scope.$on('$viewContentLoaded', function() {
-		$scope.style = document.createElement('link');
-		$scope.style.type = 'text/css';
-		$scope.style.href = 'resources/css/registration.css';
-		$scope.style.rel = 'stylesheet';
-		$scope.style = document.head.appendChild($scope.style);
+		$scope._style = document.createElement('link');
+		$scope._style.type = 'text/css';
+		$scope._style.href = 'resources/css/registration.css';
+		$scope._style.rel = 'stylesheet';
+		$scope._style = document.head.appendChild($scope._style);
 		
 		
 		
@@ -105,7 +105,8 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 	});
 
 	$scope.$on('$destroy', function() {
-		$scope._style.parentNode.removeChild($scope.style);
+		var parentNode = $scope._style.parentNode;
+		parentNode.removeChild($scope._style);
 		delete $scope._style;
 	});
 	

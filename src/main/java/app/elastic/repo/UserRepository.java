@@ -11,5 +11,6 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 public interface UserRepository extends ElasticsearchRepository<UserWelfareAccountVO, String> {
 	List<UserWelfareAccountVO> findUserByUsername(String username);
+	UserWelfareAccountVO findUserByUsernameAndPassword(String username,String password);
 	List<UserWelfareAccountVO> findUserByDateOfBirth(Date dateOfBirth);
 }
