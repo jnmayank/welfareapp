@@ -1,13 +1,27 @@
 @CHARSET "UTF-8";
 
-
 body {
 	color: #ff0025;
 	background-color: #EBEBEB;
 	/*#f10025;*/
 }
 
-#navigdiv{
+.wsb-canvas-scrollable {
+	background-color: #f0f0ee;
+	background-position-x: center;
+	background-position-y: top;
+	background-position: center top;
+	background-repeat: repeat-x;
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	background-image: url(../img/pageheader.jpg);
+	background-size: 42%;
+}
+
+
+
+/* #navigdiv {
 	background-color: olive;
 	margin-left: auto;
 	margin-right: auto;
@@ -15,85 +29,74 @@ body {
 	width: 300px;
 	padding-left: 10%;
 	padding-right: 10%;
+} */
+
+.wsb-canvas-scrollable nav {
+	display: inline-table;
+	float: right;
 }
 
-nav {
-    display: inline-table;
+.wsb-canvas-scrollable nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-nav>ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav>ul>li{
+.wsb-canvas-scrollable nav>ul>li {
 	float: left;
 }
 
-nav>ul>li>a{
-    display: block;
-    padding: 8px;
-    background-color: #dddddd;
+.wsb-canvas-scrollable nav>ul>li>a {
+	display: block;
+	padding: 8px;
+	background-color: #dddddd;
 }
 
-#main_div{
+#main_div {
 	width: 100%;
 	background-color: maroon;
-	height: 350px;	
+	height: 350px;
 }
 
-#main_div #leftsidebar{
+#main_div #leftsidebar {
 	width: 20%;
 	float: left;
 	background-color: lime;
 	height: 300px;
 }
 
-#main_div #centre{
+#main_div #centre {
 	width: 80%;
 	float: left;
 	background-color: #5E2750;
 	height: 300px;
 }
 
-
-#main_div #footer{
+#main_div #footer {
 	background-color: #EFE6D4;
 	height: 30px;
 }
 
+#hlp_chld1 .wsb-image-inner img {
+	vertical-align: middle;
+	width: 209px;
+	height: 411px;
+	float: left;
+}
 
+#hlp_chld2 .wsb-image-inner img {
+	vertical-align: middle;
+	width: 209px;
+	height: 411px;
+	float: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#hlp_chld3 .wsb-image-inner img {
+	vertical-align: middle;
+	width: 209px;
+	height: 411px;
+	float: left;
+}
 
 /* .navdiv{
 	background-color:#3fc18d; #00aced;
