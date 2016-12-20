@@ -108,13 +108,9 @@ body {
 }
 
 #registrationForm {
-	position:absolute;
-	margin-top: 50px;
-	margin-left: 40%;
-	margin-right: 50%;
-	width: 300px;
-	height: auto;
-	border: 8px solid green;
+	position: absolute;
+	background-color: black;
+	left: 300px;
 }
 
 #registrationForm .reg-inner{
@@ -142,11 +138,11 @@ body {
 	
 }
 
-.getusrdata{
-	position: absolute;
-	margin-top: 100px;	
-}
 
+#registrationForm .getusrdata{
+	position: absolute;
+	top: 350px;
+}
 
 select {
     -webkit-appearance: menulist;
@@ -161,6 +157,13 @@ select {
     border-style: solid;
     border-color: initial;
     border-image: initial;
+}
+
+/*  Grid CSS Data */
+
+.grid {
+  width: 500px;
+  height: 250px;
 }
 
 /* .navdiv{

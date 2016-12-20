@@ -2,7 +2,7 @@
  * 
  */
 
-var app = angular.module("myApp", ["ngRoute","infinite-scroll","tagged.directives.infiniteScroll","ngMaterial"]);
+var app = angular.module("myApp", ["ngRoute","infinite-scroll","tagged.directives.infiniteScroll","ngMaterial","ngTouch", "ui.grid"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {

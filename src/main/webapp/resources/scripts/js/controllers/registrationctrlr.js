@@ -150,10 +150,11 @@ app.controller('RegistrCtrl', function($scope, $http, XhrService) {
 	$scope.getAllUsers = function() {
 		var serviceURL = XhrService.getServiceBaseUrl()
 				+ 'welfareservice/getAllUsers';
-
+		
 		$http.get(serviceURL, {
 			page : $scope.page
-		}).then(function() {
+		}).then(function(data) {
+			$scope.myData = data.data.object.userWelfareAccountVOList;
 			alert('success')
 		});
 	};

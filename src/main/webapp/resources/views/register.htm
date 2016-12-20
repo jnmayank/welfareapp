@@ -47,13 +47,12 @@
 		<select aria-label="Years" name="birth_year" id="year" title="Year" ng-model="year">
 			
 		</select> -->
-		
-	</form>
+		</form>
 	</div>
+
 	<div class="getusrdata">
-		<form ng-submit="getAllUsers()">
-		<label>Submit</label> <input type="submit">
-	</form>
+		<button ng-click="getAllUsers()">load data</button>
+		<div ui-grid="{ data: myData }" class="grid"></div>
 	</div>
 </div>
 
