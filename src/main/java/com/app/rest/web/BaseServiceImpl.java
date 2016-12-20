@@ -70,6 +70,7 @@ public class BaseServiceImpl implements BaseService {
 	public WelfareVO<UserListResponseVO> getAllAccountData() {
 		List<UserWelfareAccountVO> userDataList = userRepositoryService.findAllUser();
 		UserListResponseVO resp = new UserListResponseVO();
+		resp.setUserWelfareAccountVOList(userDataList);
 		WelfareVO<UserListResponseVO> wresp = new WelfareVO<UserListResponseVO>(resp, false);
 		return wresp;
 	}

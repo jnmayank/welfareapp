@@ -20,17 +20,6 @@ body {
 }
 
 
-
-/* #navigdiv {
-	background-color: olive;
-	margin-left: auto;
-	margin-right: auto;
-	height: 40px;
-	width: 300px;
-	padding-left: 10%;
-	padding-right: 10%;
-} */
-
 .wsb-canvas-scrollable nav {
 	display: inline-table;
 	float: right;
@@ -96,6 +85,82 @@ body {
 	width: 209px;
 	height: 411px;
 	float: left;
+}
+
+.root-div {
+	position: relative;
+}
+
+.root-div #login_form {
+	position: absolute;
+	width: 50%;
+	height: 30%;
+	top: 100px;
+	left: 500px;
+}
+
+.root-div .user-infodiv {
+	position: absolute;
+	width: 50%;
+	height: 30%;
+	top: 100px;
+	left: 500px;
+}
+
+#registrationForm {
+	position:absolute;
+	margin-top: 50px;
+	margin-left: 40%;
+	margin-right: 50%;
+	width: 300px;
+	height: auto;
+	border: 8px solid green;
+}
+
+#registrationForm .reg-inner{
+	position:absolute;
+	background-color: fuchsia;
+	margin-top: 50px;
+	margin-left: 40%;
+	margin-right: 50%;
+	width: 300px;
+	height: auto;
+	border: 8px solid green;
+}
+
+#registrationForm .dateselect {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	background-color: yellow;
+	height: 30px;
+	width: 210px;
+}
+
+#registrationForm .dateselect > span {
+	
+}
+
+.getusrdata{
+	position: absolute;
+	margin-top: 100px;	
+}
+
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
 }
 
 /* .navdiv{

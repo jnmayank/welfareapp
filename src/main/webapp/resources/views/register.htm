@@ -1,5 +1,5 @@
-<h1>Registration Page</h1>
 <div id="registrationForm">
+	<div class="reg-inner">
 	<form ng-submit="register(username, password, email, day, month, year)"
 		class="ng-scope ng-pristine ng-valid">
 		
@@ -49,9 +49,11 @@
 		</select> -->
 		
 	</form>
+	</div>
+	<div class="getusrdata">
+		<form ng-submit="getAllUsers()">
+		<label>Submit</label> <input type="submit">
+	</form>
+	</div>
 </div>
-
-<form ng-submit="getAllUsers()">
-	<label>Submit</label> <input type="submit">
-</form>
 
