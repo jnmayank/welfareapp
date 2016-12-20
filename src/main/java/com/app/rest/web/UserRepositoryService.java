@@ -1,5 +1,6 @@
 package com.app.rest.web;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -26,8 +27,11 @@ public class UserRepositoryService {
 	@Autowired
 	private ElasticsearchTemplate elasticsearchTemplate;
 
-	public void findAllUser() {
-		userRepository.findAll().forEach(System.out::println);
+	public List<UserWelfareAccountVO> findAllUser() {
+		Iterable<UserWelfareAccountVO> findAll = userRepository.findAll();
+		List<UserWelfareAccountVO> userDataList = new ArrayList<>();
+		findAll.forEach(userDataList::add);
+		return userDataList;
 	}
 
 	public List<UserWelfareAccountVO> findUser(String username) {

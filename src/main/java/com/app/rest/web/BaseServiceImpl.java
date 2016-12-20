@@ -7,15 +7,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import app.elastic.repo.UserWelfareAccountVO;
-
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
 import com.app.rest.vo.LoginDataVO;
 import com.app.rest.vo.LoginResponseVO;
 import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.PostResponseVO;
+import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.WelfareVO;
+
+import app.elastic.repo.UserWelfareAccountVO;
 
 /**
  * Time : 12:53:28 am created: 14-Nov-2016 author : nitesh
@@ -66,10 +67,10 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	@Override
-	public WelfareVO<AccountCreationResponseVO> getAllAccountData() {
-		userRepositoryService.findAllUser();
-		AccountCreationResponseVO aco = new AccountCreationResponseVO();
-		WelfareVO<AccountCreationResponseVO> wresp = new WelfareVO<AccountCreationResponseVO>(aco, false);
+	public WelfareVO<UserListResponseVO> getAllAccountData() {
+		List<UserWelfareAccountVO> userDataList = userRepositoryService.findAllUser();
+		UserListResponseVO resp = new UserListResponseVO();
+		WelfareVO<UserListResponseVO> wresp = new WelfareVO<UserListResponseVO>(resp, false);
 		return wresp;
 	}
 
