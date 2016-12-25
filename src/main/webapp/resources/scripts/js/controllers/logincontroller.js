@@ -44,6 +44,7 @@ app.controller('LoginCtrl',
 						$http.post(serviceuri + 'welfareservice/login', data, config).success(function(data, status, headers, config) {
 							$rootScope.userInfo = true;
 							$rootScope.userViewName = userName;
+							$rootScope.userid = data.object.userId;
 						}).error(function(data, status, headers, config) {
 							$scope.loginError = "Invalid username/password combination";
 						});

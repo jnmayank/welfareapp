@@ -2,7 +2,7 @@
  * blogging controller
  */
 
-app.controller('BloggingCtrl', function($scope, $http, $mdDialog, XhrService) {
+app.controller('BloggingCtrl', function($scope, $http, $mdDialog,$rootScope, XhrService) {
 	
 	$scope.$on('$viewContentLoaded', function() {
 		$scope._style = document.createElement('link');
@@ -22,7 +22,8 @@ app.controller('BloggingCtrl', function($scope, $http, $mdDialog, XhrService) {
 		var serviceUri = XhrService.getServiceBaseUrl()
 				+ 'welfareservice/feedNewPost';
 		var data = {
-			'postData' : feed
+			'postData' : feed,
+			'userId': $rootScope.userViewName
 		}
 		var config = {
 			headers : {

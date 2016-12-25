@@ -1,4 +1,4 @@
-package app.elastic.repo;
+package com.app.rest.vo;
 
 import java.util.Date;
 

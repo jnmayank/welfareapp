@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
+import com.app.rest.vo.UserWelfareAccountVO;
+
 /**
  * Time : 1:02:04 am created: 25-Nov-2016 author : nitesh
  **/

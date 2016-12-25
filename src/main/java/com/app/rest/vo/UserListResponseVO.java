@@ -2,8 +2,6 @@ package com.app.rest.vo;
 
 import java.util.List;
 
-import app.elastic.repo.UserWelfareAccountVO;
-
 /**
 Time   : 11:01:18 pm
 created: 20-Dec-2016

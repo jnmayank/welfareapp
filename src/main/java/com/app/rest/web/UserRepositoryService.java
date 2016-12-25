@@ -10,9 +10,10 @@ import org.springframework.data.elasticsearch.core.query.IndexQuery;
 import org.springframework.stereotype.Component;
 
 import com.app.rest.vo.LoginDataVO;
+import com.app.rest.vo.PostDataVO;
+import com.app.rest.vo.UserWelfareAccountVO;
 
 import app.elastic.repo.UserRepository;
-import app.elastic.repo.UserWelfareAccountVO;
 
 /**
  * Time : 1:15:39 am created: 25-Nov-2016 author : nitesh
@@ -71,4 +72,21 @@ public class UserRepositoryService {
 		return false;
 	}
 
+	public String createNewPost(PostDataVO pvo){
+		
+		try{
+			elasticsearchTemplate.putMapping(PostDataVO.class);
+			IndexQuery idxQuery = new IndexQuery();
+			//idxQuery.setId(pvo.getId());
+			idxQuery.setObject(pvo);
+			elasticsearchTemplate.index(idxQuery);
+			elasticsearchTemplate.refresh(PostDataVO.class, true);
+			String documentId = idxQuery.getId();
+			return documentId;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }

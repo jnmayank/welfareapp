@@ -11,6 +11,8 @@ author : nitesh
 public class PostResponseVO {
 	private String postData;
 	private Date postCreationDate;
+	private String postId;
+	
 	public String getPostData() {
 		return postData;
 	}
@@ -23,6 +25,19 @@ public class PostResponseVO {
 	public void setPostCreationDate(Date postCreationDate) {
 		this.postCreationDate = postCreationDate;
 	}
+	
+	/**
+	 * @return the postId
+	 */
+	public String getPostId() {
+		return postId;
+	}
+	/**
+	 * @param postId the postId to set
+	 */
+	public void setPostId(String postId) {
+		this.postId = postId;
+	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -32,6 +47,7 @@ public class PostResponseVO {
 		int result = 1;
 		result = prime * result + ((postCreationDate == null) ? 0 : postCreationDate.hashCode());
 		result = prime * result + ((postData == null) ? 0 : postData.hashCode());
+		result = prime * result + ((postId == null) ? 0 : postId.hashCode());
 		return result;
 	}
 	/* (non-Javadoc)
@@ -63,8 +79,14 @@ public class PostResponseVO {
 		} else if (!postData.equals(other.postData)) {
 			return false;
 		}
+		if (postId == null) {
+			if (other.postId != null) {
+				return false;
+			}
+		} else if (!postId.equals(other.postId)) {
+			return false;
+		}
 		return true;
 	}
-	
 	
 }
