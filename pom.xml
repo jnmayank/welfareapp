@@ -5,8 +5,8 @@
 	<artifactId>welfareapp</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>rivals</name>
-	<description>challengeAppServices</description>
+	<name>welfareapp</name>
+	<description>welfareappservices</description>
 	<build>
 		<plugins>
 			<plugin>
