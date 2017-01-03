@@ -1,0 +1,27 @@
+<div id="aparent" class="apcontent">
+	<div ng-switch-default id="basicprflinfo">
+		<span ng-switch-default ng-if="userInfo" class="animate-if">
+			Welcome {{userViewName}} </span>
+	</div>
+	<div id="backgroundimg" ng-switch-default></div>
+	<div id="profilepic" ng-switch-default>
+		<img src="" />
+	</div>
+	<div ng-switch-default>Edit Profile</div>
+	<div id="paytmqr" ng-switch-default>
+		<img src="" />
+	</div>
+
+	<h3 ng-switch-when="true">
+		<input ng-model="editObject.firstName" placeholder="First Name"
+			type="text" />
+	</h3>
+
+	<div class="edit-wrapper clearfix">
+		<button class="yellow" ng-switch-default ng-click="editingProfile()">edit</button>
+		<button class="green" ng-switch-when="true" ng-click="saveEdit()">save</button>
+		<button class="red" ng-switch-when="true" ng-click="cancelEdit()">X</button>
+		<!-- Edit Fields -->
+
+
+	</div>

@@ -19,6 +19,9 @@ app.config(function($routeProvider) {
     }).when("/blogging", {
     	templateUrl: "./resources/views/blogging.htm",
     	controller: "BloggingCtrl"
+    }).when("/profile",{
+    	templateUrl: "./resources/views/profile.htm",
+    	controller: "ProfileCtrlr"
     });
     /*.when("/dashboard",{
     	templateUrl: "./resources/views/dashboard.htm",
