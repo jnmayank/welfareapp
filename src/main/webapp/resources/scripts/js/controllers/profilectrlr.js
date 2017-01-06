@@ -13,7 +13,7 @@ app.controller('ProfileCtrlr',
 		$scope._style.rel = 'stylesheet';
 		$scope._style = document.head.appendChild($scope._style);
 		if($rootScope.userInfo){
-			
+			$scope.editing = false;
 		}
 	});
 
@@ -21,7 +21,11 @@ app.controller('ProfileCtrlr',
 		var parentNode = $scope._style.parentNode;
 		parentNode.removeChild($scope._style);
 		delete $scope._style;
-	});	
+	});
+	
+	$scope.editingProfile = function() {
+		$scope.editing = true;
+	};
 });	
 	
 	/*if($rootScope.userInfo){

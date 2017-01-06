@@ -1,4 +1,4 @@
-<div id="aparent" class="apcontent">
+<div id="aparent" class="apcontent" ng-switch on="$editing">
 	<div ng-switch-default id="basicprflinfo">
 		<span ng-switch-default ng-if="userInfo" class="animate-if">
 			Welcome {{userViewName}} </span>
@@ -22,6 +22,4 @@
 		<button class="green" ng-switch-when="true" ng-click="saveEdit()">save</button>
 		<button class="red" ng-switch-when="true" ng-click="cancelEdit()">X</button>
 		<!-- Edit Fields -->
-
-
 	</div>
