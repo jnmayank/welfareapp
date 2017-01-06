@@ -110,7 +110,8 @@ body {
 #registrationForm {
 	position: absolute;
 	background-color: black;
-	left: 300px;
+	margin-left: 25%;
+	margin-right: 25%;
 }
 
 #registrationForm .reg-inner{
@@ -164,6 +165,11 @@ select {
 .grid {
   width: 500px;
   height: 250px;
+}
+
+.viewng #registrationform{
+	position: absolute;
+	margin-left: 50px;
 }
 
 /* .navdiv{
