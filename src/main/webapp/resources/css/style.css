@@ -19,7 +19,6 @@ body {
 	background-size: 42%;
 }
 
-
 .wsb-canvas-scrollable nav {
 	display: inline-table;
 	float: right;
@@ -110,12 +109,12 @@ body {
 #registrationForm {
 	position: absolute;
 	background-color: black;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 39%;
+	margin-right: 35%;
 }
 
-#registrationForm .reg-inner{
-	position:absolute;
+#registrationForm .reg-inner {
+	position: absolute;
 	background-color: fuchsia;
 	margin-top: 50px;
 	margin-left: 40%;
@@ -135,39 +134,37 @@ body {
 	width: 210px;
 }
 
-#registrationForm .dateselect > span {
+#registrationForm .dateselect>span {
 	
 }
 
-
-#registrationForm .getusrdata{
+#registrationForm .getusrdata {
 	position: absolute;
 	top: 350px;
 }
 
 select {
-    -webkit-appearance: menulist;
-    box-sizing: border-box;
-    align-items: center;
-    white-space: pre;
-    -webkit-rtl-ordering: logical;
-    color: black;
-    background-color: white;
-    cursor: default;
-    border-width: 1px;
-    border-style: solid;
-    border-color: initial;
-    border-image: initial;
+	-webkit-appearance: menulist;
+	box-sizing: border-box;
+	align-items: center;
+	white-space: pre;
+	-webkit-rtl-ordering: logical;
+	color: black;
+	background-color: white;
+	cursor: default;
+	border-width: 1px;
+	border-style: solid;
+	border-color: initial;
+	border-image: initial;
 }
 
 /*  Grid CSS Data */
-
 .grid {
-  width: 500px;
-  height: 250px;
+	width: 500px;
+	height: 250px;
 }
 
-.viewng #registrationform{
+.viewng #registrationform {
 	position: absolute;
 	margin-left: 50px;
 }
