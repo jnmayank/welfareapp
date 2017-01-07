@@ -8,26 +8,29 @@ body {
 
 .wsb-canvas-scrollable {
 	background-color: #f0f0ee;
-	background-position-x: center;
-	background-position-y: top;
-	background-position: center top;
+	background-position: top;
 	background-repeat: repeat-x;
 	position: absolute;
 	width: 100%;
-	height: 10%;
+	height: 56px;
 	background-image: url(../img/pageheader.jpg);
-	background-size: 42%;
+	background-size: 50%;
 }
 
 .wsb-canvas-scrollable nav {
 	display: inline-table;
 	float: right;
+	position: absolute;
+	height: 25%;
+	width: auto;
 }
 
 .wsb-canvas-scrollable nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	height: 20%;
+	width: auto;
 }
 
 .wsb-canvas-scrollable nav>ul>li {
@@ -65,18 +68,36 @@ body {
 	height: 30px;
 }
 
-#hlp_chld1 .wsb-image-inner img {
+#maindiv .hlp_chld1{
+	position: absolute;
+	margin-left: 20px;
+	float: left;	
+}
+
+#maindiv .hlp_chld2{
+	position: absolute;
+	margin-left: 20px;
+	float: left;
+}
+
+#maindiv .hlp_chld3{
+	position: absolute;
+	margin-left: 20px;
+	float: left;
+}
+
+/* #hlp_chld1 .wsb-image-inner img {
 	vertical-align: middle;
 	width: 209px;
 	height: 411px;
 	float: left;
+	left: 30px;
 }
 
 #hlp_chld2 .wsb-image-inner img {
 	vertical-align: middle;
 	width: 209px;
 	height: 411px;
-	float: left;
 }
 
 #hlp_chld3 .wsb-image-inner img {
@@ -84,7 +105,7 @@ body {
 	width: 209px;
 	height: 411px;
 	float: left;
-}
+} */
 
 .root-div {
 	position: relative;
@@ -168,41 +189,3 @@ select {
 	position: absolute;
 	margin-left: 50px;
 }
-
-/* .navdiv{
-	background-color:#3fc18d; #00aced;
-	height: 50px;
-	width: inherit;
-	font-family: monospace;
-	padding: inherit;
-	text-align: center;
-	vertical-align: middle;
-} */
-
-/* .header_sec{
-		
-} */
-
-/* .login{
-position: absolute;
-width: 50%;
-height: 30%;
-top: 100px;
-left: 500px;
-	
-} */
-
-/* .login>input {
-	color: #000000;
-	font-family: fantasy;
-	font-weight:bold;
-	background-color: #a2baac;
-}
-
-.login>button {
-	border-bottom-style: double;
-	azimuth: left-side;
-	border-radius: 5px;
-	background-color: #e31c1c;
-	color: white;
-} */
