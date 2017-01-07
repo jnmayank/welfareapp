@@ -1,9 +1,8 @@
 @CHARSET "UTF-8";
 
 body {
-	color: #ff0025;
+	color: #d12234;
 	background-color: #EBEBEB;
-	/*#f10025;*/
 }
 
 .wsb-canvas-scrollable {
@@ -13,14 +12,14 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 56px;
+	margin-top:-16px;
 	background-image: url(../img/pageheader.jpg);
-	background-size: 50%;
 }
 
 .wsb-canvas-scrollable nav {
 	display: inline-table;
 	float: right;
-	position: absolute;
+	position: relative;
 	height: 25%;
 	width: auto;
 }
@@ -46,21 +45,8 @@ body {
 #main_div {
 	width: 100%;
 	background-color: maroon;
-	height: 350px;
-}
-
-#main_div #leftsidebar {
-	width: 20%;
-	float: left;
-	background-color: lime;
-	height: 300px;
-}
-
-#main_div #centre {
-	width: 80%;
-	float: left;
-	background-color: #5E2750;
-	height: 300px;
+	height: 950px;
+	
 }
 
 #main_div #footer {
@@ -68,44 +54,39 @@ body {
 	height: 30px;
 }
 
-#maindiv .hlp_chld1{
-	position: absolute;
-	margin-left: 20px;
-	float: left;	
-}
-
-#maindiv .hlp_chld2{
-	position: absolute;
-	margin-left: 20px;
+div.hlp_chld1{
+	position: relative;
+	margin-left: 33%;
 	float: left;
+	height: 280px;	
 }
 
-#maindiv .hlp_chld3{
-	position: absolute;
-	margin-left: 20px;
+div.hlp_chld2{
+	position: relative;
 	float: left;
+	height: 280px;
 }
 
-/* #hlp_chld1 .wsb-image-inner img {
-	vertical-align: middle;
-	width: 209px;
-	height: 411px;
+div.hlp_chld3{
+	position: relative;
 	float: left;
-	left: 30px;
+	height: 280px;
 }
 
-#hlp_chld2 .wsb-image-inner img {
-	vertical-align: middle;
-	width: 209px;
-	height: 411px;
+div.hlp_chld1>img{
+	height: 280px;
+	margin-top: 30px;	
 }
 
-#hlp_chld3 .wsb-image-inner img {
-	vertical-align: middle;
-	width: 209px;
-	height: 411px;
-	float: left;
-} */
+div.hlp_chld2>img{
+	height: 280px;
+	margin-top: 30px;	
+}
+
+div.hlp_chld3>img{
+	height: 280px;
+	margin-top: 30px;	
+}
 
 .root-div {
 	position: relative;

@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html>
-	<link rel="shortcut icon" href="./resources/icons/icon2.png" />
-	<script src="./resources/libs/js/angular.js"></script>
-	<script src="./resources/libs/js/angular-route.js"></script>
-	<script src="./resources/libs/js/jquery.min.js"></script>
-	<script src="./resources/libs/js/ng-infinite-scroll.min.js"></script>
-	<script src="./resources/libs/js/taggedInfiniteScroll.min.js"></script>
-	<script src="./resources/libs/js/angular-animate.js"></script>
-	<script src="./resources/libs/js/angular-aria.min.js"></script>
-	<script src="./resources/libs/js/angular-material.min.js"></script>
-	<script src="./resources/libs/js/angular-messages.min.js"></script>
-	<script src="./resources/libs/js/angular-touch.js"></script>
-	<script src="./resources/libs/js/ui-grid.min.js"></script>
+<link rel="shortcut icon" href="./resources/icons/icon2.png" />
+<script src="./resources/libs/js/angular.js"></script>
+<script src="./resources/libs/js/angular-route.js"></script>
+<script src="./resources/libs/js/jquery.min.js"></script>
+<script src="./resources/libs/js/ng-infinite-scroll.min.js"></script>
+<script src="./resources/libs/js/taggedInfiniteScroll.min.js"></script>
+<script src="./resources/libs/js/angular-animate.js"></script>
+<script src="./resources/libs/js/angular-aria.min.js"></script>
+<script src="./resources/libs/js/angular-material.min.js"></script>
+<script src="./resources/libs/js/angular-messages.min.js"></script>
+<script src="./resources/libs/js/angular-touch.js"></script>
+<script src="./resources/libs/js/ui-grid.min.js"></script>
 
-	<script type="text/javascript" src="./resources/app.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript" src="./resources/app.js"></script>
+<script type="text/javascript"
 	src="./resources/scripts/js/service/xhrservice.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="./resources/scripts/js/controllers/registrationctrlr.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="./resources/scripts/js/controllers/homecontroller.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="./resources/scripts/js/controllers/logincontroller.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="./resources/scripts/js/controllers/bloggingctrlr.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="./resources/scripts/js/controllers/profilectrlr.js"></script>
-	<link rel="stylesheet" href="./resources/css/angular-material.min.css">
-	<link rel="stylesheet" href="./resources/css/ui-grid.min.css">
-	<body ng-app="myApp">
+<link rel="stylesheet" href="./resources/css/angular-material.min.css">
+<link rel="stylesheet" href="./resources/css/ui-grid.min.css">
+<body ng-app="myApp">
 
-		<div class="wsb-canvas-scrollable">
-			<nav>
-				<ul>
-					<li>
-						<a href="#/">Main</a>
-					</li>
-					<li>
-						<a href="#register">Register</a>
-					</li>
-					<li>
-						<a href="#login">Login</a>
-					</li>
-					<li>
-						<a href="#blogging">Blogging</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="user_info" ng-model="userInfo" ng-init="userInfo=false">
-			<span ng-if="userInfo" class="animate-if"> Welcome {{userViewName}}</span>
-		</div>
-		<div class="viewng" ng-view></div>
-
-		<p>
-			Click on the links to navigate to Registration Login and
-			Blogging pages
-		</p>
-	</body>
+	<div class="wsb-canvas-scrollable">
+		<nav>
+			<ul>
+				<li><a href="#/" style="text-decoration:none">Main</a></li>
+				<li><a href="#register" style="text-decoration:none">Register</a></li>
+				<li><a href="#login" style="text-decoration:none">Login</a></li>
+				<li><a href="#blogging" style="text-decoration:none">Blogging</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="user_info" ng-model="userInfo" ng-init="userInfo=false">
+		<span ng-if="userInfo" class="animate-if"> Welcome
+			{{userViewName}}</span>
+	</div>
+	<div class="viewng" ng-view></div>
+	<div class="footersection">This is footer area</div>
+</body>
 </html>
