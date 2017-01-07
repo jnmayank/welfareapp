@@ -6,14 +6,14 @@ body {
 }
 
 .wsb-canvas-scrollable {
-	background-color: #f0f0ee;
+	background-color:rgba(65,65,65,.9);
 	background-position: top;
 	background-repeat: repeat-x;
 	position: absolute;
 	width: 100%;
 	height: 56px;
-	margin-top:-16px;
-	background-image: url(../img/pageheader.jpg);
+	margin-top:0px;
+	/* background-image: url(../img/pageheader.jpg); */
 }
 
 .wsb-canvas-scrollable nav {
@@ -26,7 +26,7 @@ body {
 
 .wsb-canvas-scrollable nav ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 0px;
 	padding: 0;
 	height: 20%;
 	width: auto;
@@ -46,7 +46,8 @@ body {
 	width: 100%;
 	background-color: maroon;
 	height: 950px;
-	
+	position: absolute;
+	margin-top: 49px;
 }
 
 #main_div #footer {
@@ -54,20 +55,20 @@ body {
 	height: 30px;
 }
 
-div.hlp_chld1{
+#main_div .hlp_chld1{
 	position: relative;
 	margin-left: 33%;
 	float: left;
 	height: 280px;	
 }
 
-div.hlp_chld2{
+#main_div .hlp_chld2{
 	position: relative;
 	float: left;
 	height: 280px;
 }
 
-div.hlp_chld3{
+#main_div .hlp_chld3{
 	position: relative;
 	float: left;
 	height: 280px;
