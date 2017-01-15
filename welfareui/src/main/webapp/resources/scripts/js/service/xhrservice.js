@@ -4,11 +4,11 @@
 
 app.factory('XhrService', function(){
 	var baseUrl=window.location.toString();
-	var uri = baseUrl.split("#");
+	var uri = baseUrl.split("#")[0].replace('welfareui','welfaresrvc');
 	
 	return{
 		getServiceBaseUrl: function() {
-			return uri[0]+'service/';
+			return uri+'service/';
 		}
 	};
 });

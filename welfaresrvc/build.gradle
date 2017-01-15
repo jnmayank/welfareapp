@@ -1,10 +1,6 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'war'
-apply plugin: 'eclipse-wtp'
-
-
-project.group = 'angularjs'
+import javax.tools.ToolProvider
+import java.net.URLClassLoader
+project.group = 'welfaresvc'
 project.version = '1.0.0'
 
 /*compileJava {
@@ -16,9 +12,9 @@ repositories {
 }
 
 dependencies{
-	
+	/*compile files("${System.properties['java.home']}/../lib/tools.jar")*/
 	//compile group: 'org.springframework', name: 'spring-context', version: '4.2.4.RELEASE'
-	
+	compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)
 	compile('org.springframework:spring-context:4.2.4.RELEASE'){
 		exclude group:'commons-logging' , module: 'commons-logging'
 	}
