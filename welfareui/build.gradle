@@ -1,0 +1,8 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+
+project.group = 'welfareui'
+project.version = '1.0.0'

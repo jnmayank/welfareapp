@@ -1,0 +1,21 @@
+<h1>Welcome To blogged feeds</h1>
+
+<div class="md-padding" id="popupContainer" ng-cloak>
+  <p class="inset">
+    Open a dialog over the app's content. Press escape or click outside to close the dialog and
+    send focus back to the triggering button.
+  </p>
+
+  <div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
+    <md-button class="md-primary md-raised" ng-click="showPrompt($event)"  >
+      Create New Post
+    </md-button>
+  </div>
+</div>
+
+
+<div id='base-div' infinite-scroll="getMoreData()">
+    <div ng-repeat="item in items" class="userContainer" id="{{ 'object-' + $index }}">
+        <h4>{{item.postCreationDate}} {{item.postData}}</h4>
+    </div>
+</div>
