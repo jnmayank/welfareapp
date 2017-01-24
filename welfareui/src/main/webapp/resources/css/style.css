@@ -112,8 +112,9 @@ div.hlp_chld3>img{
 #registrationForm {
 	position: absolute;
 	background-color: black;
-	margin-left: 39%;
+	margin-left: 40%;
 	margin-right: 35%;
+	margin-top: 30%;'
 }
 
 #registrationForm .reg-inner {
@@ -124,7 +125,6 @@ div.hlp_chld3>img{
 	margin-right: 50%;
 	width: 300px;
 	height: auto;
-	border: 8px solid green;
 }
 
 #registrationForm .dateselect {
@@ -132,9 +132,9 @@ div.hlp_chld3>img{
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
-	background-color: yellow;
 	height: 30px;
 	width: 210px;
+	text-align: center;
 }
 
 #registrationForm .dateselect>span {
