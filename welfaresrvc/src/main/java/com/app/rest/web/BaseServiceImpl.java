@@ -1,8 +1,11 @@
 package com.app.rest.web;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +21,6 @@ import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
 import com.app.sql.mgr.HibernateTransMgr;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.JsonObject;
 
 /**
@@ -96,6 +98,12 @@ public class BaseServiceImpl implements BaseService {
 	public WelfareVO<GenericMessageResponseVO> createCountry(JsonObject jsonObject) {
 		System.out.println(jsonObject.getAsString());
 		return null;
+	}
+
+	@Override
+	public Response createState(JsonObject jsonObject) {
+		GenericMessageResponseVO resp = new GenericMessageResponseVO();
+		return javax.ws.rs.core.Response.created(URI.create(resp.getMessage())).build();
 	}
 
 }
