@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.GenericMessageResponseVO;
 import com.app.rest.vo.LoginDataVO;
 import com.app.rest.vo.LoginResponseVO;
 import com.app.rest.vo.PostDataVO;
@@ -17,6 +18,8 @@ import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
 import com.app.sql.mgr.HibernateTransMgr;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.google.gson.JsonObject;
 
 /**
  * Time : 12:53:28 am created: 14-Nov-2016 author : nitesh
@@ -87,6 +90,12 @@ public class BaseServiceImpl implements BaseService {
 		LoginResponseVO loginResponseVO = hibernateTransMgr.validateUser(loginDataVO);// userRepositoryService.validateLoginCredentials(loginDataVO);
 		WelfareVO<LoginResponseVO> response = new WelfareVO<LoginResponseVO>(loginResponseVO, false);
 		return response;
+	}
+
+	@Override
+	public WelfareVO<GenericMessageResponseVO> createCountry(JsonObject jsonObject) {
+		System.out.println(jsonObject.getAsString());
+		return null;
 	}
 
 }
