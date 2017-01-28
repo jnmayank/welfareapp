@@ -69,4 +69,24 @@ public interface BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/createState")
 	Response createState(JsonObject jsonObject);
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getCountryList")
+	Response getCountryList();
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getStateList")
+	Response getStateList(@QueryParam("countryId") long countryId);
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getCityList")
+	Response getCityList(@QueryParam("stateId") long stateId);
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getCityList")
+	Response getStreetList(@QueryParam("cityId") long cityId);
 }

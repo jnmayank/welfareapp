@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.CountryListResponseVO;
 import com.app.rest.vo.GenericMessageResponseVO;
 import com.app.rest.vo.LoginDataVO;
 import com.app.rest.vo.LoginResponseVO;
@@ -103,7 +105,29 @@ public class BaseServiceImpl implements BaseService {
 	@Override
 	public Response createState(JsonObject jsonObject) {
 		GenericMessageResponseVO resp = new GenericMessageResponseVO();
+		resp.setMessage("OK");
 		return javax.ws.rs.core.Response.created(URI.create(resp.getMessage())).build();
+	}
+
+	@Override
+	public Response getCountryList() {
+		CountryListResponseVO countryList = hibernateTransMgr.getCountryList();
+		return Response.ok(countryList, MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getStateList(long countryId) {
+		return Response.ok(hibernateTransMgr.getStateListByCountry(countryId), MediaType.APPLICATION_JSON).build();
+	}
+	
+	@Override
+	public Response getCityList(long stateId) {
+		return Response.ok(hibernateTransMgr.getCityListByState(stateId), MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getStreetList(long cityId) {
+		return Response.ok(hibernateTransMgr.getStreetListByState(cityId), MediaType.APPLICATION_JSON).build();
 	}
 
 }

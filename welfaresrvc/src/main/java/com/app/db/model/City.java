@@ -18,7 +18,7 @@ public class City {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cityId")
-	private long cityId;
+	private Long cityId;
 
 	/* private int stateId; */
 
@@ -32,11 +32,11 @@ public class City {
 	@OneToMany(mappedBy="city")
 	private Set<Street> street;
 	
-	public long getCityId() {
+	public Long getCityId() {
 		return cityId;
 	}
 
-	public void setCityId(long cityId) {
+	public void setCityId(Long cityId) {
 		this.cityId = cityId;
 	}
 

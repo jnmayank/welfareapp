@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.app.db.model.City;
+import com.app.db.model.Country;
+import com.app.db.model.State;
+import com.app.db.model.Street;
 import com.app.db.model.User;
 import com.app.rest.vo.LoginDataVO;
 
@@ -58,4 +62,39 @@ public class WelfareDAOImpl implements WelfareDAO {
 		return query.list();
 	}
 
+	@Override
+	public List<Country> getCountryList() {
+		Session currentSession = hbnsessionFactory.getCurrentSession();
+		currentSession.beginTransaction();
+		Query query = currentSession.createQuery("from Country");
+		return query.list();
+	}
+
+	@Override
+	public List<State> getStateList(Long countryId) {
+		Session currentSession = hbnsessionFactory.getCurrentSession();
+		currentSession.beginTransaction();
+		Query query = currentSession.createQuery("from State s where s.country= :countryId");
+		query.setLong("countryId", countryId);
+		return query.list();
+	}
+
+	@Override
+	public List<City> getCityList(Long stateId) {
+		Session currentSession = hbnsessionFactory.getCurrentSession();
+		currentSession.beginTransaction();
+		Query query = currentSession.createQuery("from City s where s.state= :stateId");
+		query.setLong("stateId", stateId);
+		return query.list();
+	}
+
+	@Override
+	public List<Street> getStreetList(Long cityId) {
+		Session currentSession = hbnsessionFactory.getCurrentSession();
+		currentSession.beginTransaction();
+		Query query = currentSession.createQuery("from Street s where s.city= :cityId");
+		query.setLong("cityId", cityId);
+		return query.list();
+	}
+	
 }
