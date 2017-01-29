@@ -12,6 +12,13 @@ app.controller('ProfileCtrlr',
 		$scope._style.href = 'resources/css/style.css';
 		$scope._style.rel = 'stylesheet';
 		$scope._style = document.head.appendChild($scope._style);
+		
+		$scope._style = document.createElement('link');
+		$scope._style.type = 'text/css';
+		$scope._style.href = 'resources/css/profile.css';
+		$scope._style.rel = 'stylesheet';
+		$scope._style = document.head.appendChild($scope._style);
+		
 		if($rootScope.userInfo){
 			$scope.editing = false;
 		}
@@ -26,6 +33,9 @@ app.controller('ProfileCtrlr',
 	$scope.editingProfile = function() {
 		$scope.editing = true;
 	};
+	
+	$scope.imgurl=XhrService.getServiceBaseUrl()+'/welfareservice/getUserImageForId?userId='+$rootScope.userid;
+	
 });	
 	
 	/*if($rootScope.userInfo){

@@ -11,7 +11,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 				type="text" ng-model="email" class="ng-pristine ng-valid"> <br />
 			<div class="dateselect">
-				<span> <select name="daySelect" id="daySelect"
+				<span><select name="daySelect" id="daySelect"
 					ng-options="option.name for option in day.availableOptions track by option.id"
 					ng-model="day.selectedOption"></select> <select name="monthSelect"
 					id="monthSelect"
@@ -21,12 +21,13 @@
 					ng-options="option.name for option in year.availableOptions track by option.id"
 					ng-model="year.selectedOption"></select>
 				</span> <br />
-				<select ng-options="country.name for country in country.availableList track by country.id"
-				 ng-model="country.selectedCountry"></select>
+				<!--  <select ng-options="country.name for country in country.availableList track by country.id"
+				 ng-model="country.selectedCountry"></select>-->
 			</div>
-			<input type="submit">
+			<div style="position: absolute; margin-left: 25%;margin-right: 20%;">
+			<input class="btn btn-warning" type="submit" />
 			<!-- <button class="btn btn-success" ng-click="">Submit</button> -->
-			<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+			<button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>
 			{{PostDataResponse}}
 		</form>
 	</div>

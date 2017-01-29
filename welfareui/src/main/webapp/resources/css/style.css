@@ -11,7 +11,7 @@ body {
 	background-repeat: repeat-x;
 	position: absolute;
 	width: 100%;
-	height: 56px;
+	height: 50px;
 	margin-top:0px;
 	/* background-image: url(../img/pageheader.jpg); */
 }
@@ -119,12 +119,17 @@ div.hlp_chld3>img{
 
 #registrationForm .reg-inner {
 	position: absolute;
-	background-color: fuchsia;
+	background-color: #ed9a25;
 	margin-top: 50px;
 	margin-left: 40%;
 	margin-right: 50%;
 	width: 300px;
 	height: auto;
+	background: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
+}
+
+#registrationForm .reg-inner form{
+	text-align: center;
 }
 
 #registrationForm .dateselect {
@@ -135,6 +140,7 @@ div.hlp_chld3>img{
 	height: 30px;
 	width: 210px;
 	text-align: center;
+	padding: 5px 5px 5px 5px;	
 }
 
 #registrationForm .dateselect>span {
@@ -159,8 +165,17 @@ select {
 	border-style: solid;
 	border-color: initial;
 	border-image: initial;
+	border-radius: 0.19em;
 }
 
+input {
+	border-radius: 0.19em;
+}
+
+button{
+	border-radius: 0.19em;
+	background-color: #fc021c;
+}
 /*  Grid CSS Data */
 .grid {
 	width: 500px;
@@ -171,3 +186,4 @@ select {
 	position: absolute;
 	margin-left: 50px;
 }
+

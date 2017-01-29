@@ -89,4 +89,9 @@ public interface BaseService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/getCityList")
 	Response getStreetList(@QueryParam("cityId") long cityId);
+	
+	@GET
+    @Path("/getUserImageForId")
+    @Produces(MediaType.APPLICATION_OCTET_STREAM)
+    public Response getUserImageForId(@QueryParam("userId") long userId);
 }

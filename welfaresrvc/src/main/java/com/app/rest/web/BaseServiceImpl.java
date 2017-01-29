@@ -1,10 +1,14 @@
 package com.app.rest.web;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.imageio.stream.FileImageInputStream;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -128,6 +132,20 @@ public class BaseServiceImpl implements BaseService {
 	@Override
 	public Response getStreetList(long cityId) {
 		return Response.ok(hibernateTransMgr.getStreetListByState(cityId), MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getUserImageForId(long userId) {
+		File fl = new File("/home/nitesh/appdev/git/welfareapp/welfareui/src/main/webapp/resources/img/homeimg3.jpg");
+		/*ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		try {
+			FileImageInputStream faos = new FileImageInputStream(fl);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		return Response.ok(fl,MediaType.APPLICATION_OCTET_STREAM).build();
+		//return null;
 	}
 
 }

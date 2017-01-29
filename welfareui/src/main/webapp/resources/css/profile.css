@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+/*      Style for profile page START*/
+.aparent{
+	position: absolute;
+	margin-top: 100px;
+	height: 100%;
+	width: 100%;
+}
+
+.aparent #main_content{
+	float: left;
+	width: 70%;
+	border: thin;
+	border-color: black;
+	border-style: solid;
+}
+
+.aparent #right_sidebar{
+	float: left;
+	width: 30%;
+	border: thin;
+	border-color: black;
+	border-style: solid;
+}
+
+div #profilepic img{
+	height: 20%;
+	width: 20%;
+}
+/*      Style for profile page  END*/
