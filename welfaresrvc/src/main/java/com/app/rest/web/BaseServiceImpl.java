@@ -1,15 +1,12 @@
 package com.app.rest.web;
 
-import java.io.ByteArrayOutputStream;
+
 import java.io.File;
-import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
-import javax.imageio.stream.FileImageInputStream;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -29,6 +26,7 @@ import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
 import com.app.sql.mgr.HibernateTransMgr;
+import com.google.gson.JsonObject;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
 
@@ -165,7 +163,5 @@ public class BaseServiceImpl implements BaseService {
 		}
 		return sbf.toString();
 	}
-	
-	
 
 }
