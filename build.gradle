@@ -9,5 +9,11 @@ subprojects {
     
 	repositories {
         mavenCentral()
-    }
+    	}
+
+eclipse{
+	classpath {
+        downloadSources = true
+       }
+   }
 }

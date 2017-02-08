@@ -38,7 +38,6 @@
 
 
 	<bean id="jsonProvider" class="com.app.handler.message.GsonMessageBodyHandler" />
-
 	<!-- Jax RS Server -->
 	<jaxrs:server id="restContainer" address="/">
 		<jaxrs:serviceBeans>

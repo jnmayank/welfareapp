@@ -16,7 +16,7 @@ public class Street {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="streetId")
-	private int streetId;
+	private Long streetId;
 	
 	@Column(name="streetName")
 	private String streetName;
@@ -25,11 +25,11 @@ public class Street {
 	@JoinColumn(name="cityId",nullable=false)
 	private City city;
 	
-	public int getStreetId() {
+	public Long getStreetId() {
 		return streetId;
 	}
 
-	public void setStreetId(int streetId) {
+	public void setStreetId(Long streetId) {
 		this.streetId = streetId;
 	}
 

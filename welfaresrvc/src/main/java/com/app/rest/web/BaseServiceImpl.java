@@ -1,9 +1,17 @@
 package com.app.rest.web;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.imageio.stream.FileImageInputStream;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +19,8 @@ import org.springframework.stereotype.Service;
 import com.app.mongo.provider.MongoProvider;
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
+import com.app.rest.vo.CountryListResponseVO;
+import com.app.rest.vo.GenericMessageResponseVO;
 import com.app.rest.vo.LoginDataVO;
 import com.app.rest.vo.LoginResponseVO;
 import com.app.rest.vo.PostDataVO;
@@ -94,6 +104,54 @@ public class BaseServiceImpl implements BaseService {
 		LoginResponseVO loginResponseVO = hibernateTransMgr.validateUser(loginDataVO);// userRepositoryService.validateLoginCredentials(loginDataVO);
 		WelfareVO<LoginResponseVO> response = new WelfareVO<LoginResponseVO>(loginResponseVO, false);
 		return response;
+	}
+
+	@Override
+	public WelfareVO<GenericMessageResponseVO> createCountry(JsonObject jsonObject) {
+		System.out.println(jsonObject.getAsString());
+		return null;
+	}
+
+	@Override
+	public Response createState(JsonObject jsonObject) {
+		GenericMessageResponseVO resp = new GenericMessageResponseVO();
+		resp.setMessage("OK");
+		return javax.ws.rs.core.Response.created(URI.create(resp.getMessage())).build();
+	}
+
+	@Override
+	public Response getCountryList() {
+		CountryListResponseVO countryList = hibernateTransMgr.getCountryList();
+		return Response.ok(countryList, MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getStateList(long countryId) {
+		return Response.ok(hibernateTransMgr.getStateListByCountry(countryId), MediaType.APPLICATION_JSON).build();
+	}
+	
+	@Override
+	public Response getCityList(long stateId) {
+		return Response.ok(hibernateTransMgr.getCityListByState(stateId), MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getStreetList(long cityId) {
+		return Response.ok(hibernateTransMgr.getStreetListByState(cityId), MediaType.APPLICATION_JSON).build();
+	}
+
+	@Override
+	public Response getUserImageForId(long userId) {
+		File fl = new File("/home/nitesh/appdev/git/welfareapp/welfareui/src/main/webapp/resources/img/homeimg3.jpg");
+		/*ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		try {
+			FileImageInputStream faos = new FileImageInputStream(fl);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		return Response.ok(fl,MediaType.APPLICATION_OCTET_STREAM).build();
+		//return null;
 	}
 
 	@Override

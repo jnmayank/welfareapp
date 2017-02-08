@@ -19,7 +19,7 @@ public class State {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="stateId")
-	private long stateId;
+	private Long stateId;
 	
 	@Column(name="stateName")
 	private String stateName;
@@ -32,10 +32,10 @@ public class State {
 	@OneToMany(mappedBy="state")
 	private Set<City> city;
 	
-	public long getStateId() {
+	public Long getStateId() {
 		return stateId;
 	}
-	public void setStateId(long stateId) {
+	public void setStateId(Long stateId) {
 		this.stateId = stateId;
 	}
 	public String getStateName() {

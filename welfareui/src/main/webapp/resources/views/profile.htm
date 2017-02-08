@@ -1,9 +1,19 @@
-<div id="aparent" class="apcontent" ng-switch on="$editing">
-	<div ng-switch-default id="basicprflinfo">
+<div class="aparent" class="apcontent" ng-switch on="$editing">
+	<div id="main_content">Content Feed</div>
+	
+	<div id="right_sidebar">
+		<div id="profilepic"><img alt="" ng-src="{{imgurl}}"></div>
+		<div id="profilemod">Profile_Mod</div>
+	</div>
+	<!-- <div ng-switch-default id="basicprflinfo">
 		<span ng-switch-default ng-if="userInfo" class="animate-if">
 			Welcome {{userViewName}} </span>
-	</div>
-	<div id="backgroundimg" ng-switch-default></div>
+	</div> -->
+	
+	
+	
+	
+	<!-- <div id="backgroundimg" ng-switch-default></div>
 	<div id="profilepic" ng-switch-default>
 		<img src="" />
 	</div>
@@ -21,5 +31,7 @@
 		<button class="yellow" ng-switch-default ng-click="editingProfile()">edit</button>
 		<button class="green" ng-switch-when="true" ng-click="saveEdit()">save</button>
 		<button class="red" ng-switch-when="true" ng-click="cancelEdit()">X</button>
-		<!-- Edit Fields -->
-	</div>
+		Edit Fields
+	</div> -->
+	
+</div>	

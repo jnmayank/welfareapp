@@ -17,7 +17,7 @@ public class Country {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="countryId")
-	private long countryId;
+	private Long countryId;
 	
 	@Column
 	private String countryName;
@@ -25,11 +25,11 @@ public class Country {
 	@OneToMany(mappedBy="country")
 	private Set<State> states;
 	
-	public long getCountryId() {
+	public Long getCountryId() {
 		return countryId;
 	}
 
-	public void setCountryId(long countryId) {
+	public void setCountryId(Long countryId) {
 		this.countryId = countryId;
 	}
 
