@@ -44,7 +44,7 @@ body {
 
 #main_div {
 	width: 100%;
-	background-color: maroon;
+	background-color: #e2fefe;
 	height: 950px;
 	position: absolute;
 	margin-top: 49px;
@@ -170,4 +170,15 @@ select {
 .viewng #registrationform {
 	position: absolute;
 	margin-left: 50px;
+}
+
+
+/* footer section */
+.footersection{
+	position: absolute;
+	margin-top: 90%;
+	background-color:rgba(120,239,104,0.66);
+	height: 41%;
+	width: 100%;
+	text-align: center;
 }

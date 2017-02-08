@@ -22,6 +22,9 @@ app.config(function($routeProvider) {
     }).when("/profile",{
     	templateUrl: "./resources/views/profile.htm",
     	controller: "ProfileCtrlr"
+    }).when('/grievapp',{
+    	templateUrl: "./resources/views/grievapp.htm",
+    	controller: "GrievappCtrl"
     });
     /*.when("/dashboard",{
     	templateUrl: "./resources/views/dashboard.htm",

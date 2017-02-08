@@ -2,11 +2,13 @@ package com.app.rest.web;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.app.mongo.provider.MongoProvider;
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
 import com.app.rest.vo.LoginDataVO;
@@ -17,6 +19,8 @@ import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
 import com.app.rest.vo.WelfareVO;
 import com.app.sql.mgr.HibernateTransMgr;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoIterable;
 
 /**
  * Time : 12:53:28 am created: 14-Nov-2016 author : nitesh
@@ -30,6 +34,9 @@ public class BaseServiceImpl implements BaseService {
 
 	@Autowired
 	private HibernateTransMgr hibernateTransMgr;
+	
+	@Autowired
+	private MongoProvider mongoProvider;
 
 	@Override
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
@@ -88,5 +95,19 @@ public class BaseServiceImpl implements BaseService {
 		WelfareVO<LoginResponseVO> response = new WelfareVO<LoginResponseVO>(loginResponseVO, false);
 		return response;
 	}
+
+	@Override
+	public String getMongo() {
+		MongoDatabase db = mongoProvider.getDb();
+		db.createCollection("aldex");
+		MongoIterable<String> listCollectionNames = db.listCollectionNames();
+		StringBuffer sbf = new StringBuffer();
+		for (String string : listCollectionNames) {
+			sbf.append(string+",");
+		}
+		return sbf.toString();
+	}
+	
+	
 
 }

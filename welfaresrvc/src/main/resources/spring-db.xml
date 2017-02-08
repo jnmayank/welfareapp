@@ -17,6 +17,13 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 
+	<bean id="mongoClient" class="com.mongodb.MongoClient">
+		<constructor-arg value="localhost" type="java.lang.String">
+		</constructor-arg>
+		<constructor-arg value="27017" type="int">
+		</constructor-arg>
+	</bean>
+
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./resources/css/grievapp.css">
+<div class="postgriev">
+
+	<form onsubmit="feedgrivance()">
+		<select ng-model="selectedState" ng-options="x for x in states">
+		</select>
+		<br/>
+		<input type="text" ng-model='newState' ng-if="selectedState=='other' || selectedState=='Other'">
+		<br/>
+		<span ng-if="selectedState!=''">
+		<select ng-model="selectedDepartment" ng-options="y for y in departMents">
+		</select>
+		<br/>
+		<input type="text" ng-model="newDepartment" ng-if="selectedDepartment=='other' || selectedDepartment=='Other'">
+		</span>
+		<input type="submit" >
+	</form>
+
+</div>

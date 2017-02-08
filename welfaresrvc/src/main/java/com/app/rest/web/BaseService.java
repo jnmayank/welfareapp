@@ -12,10 +12,10 @@ import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
 import com.app.rest.vo.LoginDataVO;
 import com.app.rest.vo.LoginResponseVO;
+import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.PostResponseVO;
 import com.app.rest.vo.UserListResponseVO;
 import com.app.rest.vo.UserWelfareAccountVO;
-import com.app.rest.vo.PostDataVO;
 import com.app.rest.vo.WelfareVO;
 
 /**
@@ -55,4 +55,8 @@ public interface BaseService {
 	@Path("/getAllUsers")
 	public WelfareVO<UserListResponseVO> getAllAccountData();
 	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getMongo")
+	public String getMongo();
 }
