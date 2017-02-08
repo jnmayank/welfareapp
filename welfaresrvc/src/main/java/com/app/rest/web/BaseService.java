@@ -93,5 +93,10 @@ public interface BaseService {
 	@GET
     @Path("/getUserImageForId")
     @Produces(MediaType.APPLICATION_OCTET_STREAM)
-    public Response getUserImageForId(@QueryParam("userId") long userId);    
+    public Response getUserImageForId(@QueryParam("userId") long userId);
+
+	@GET
+    @Path("/getMongo")
+    @Produces(MediaType.APPLICATION_JSON)
+	String getMongo();    
 }
