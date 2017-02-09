@@ -55,4 +55,45 @@ app.controller('GrievappCtrl', function($scope, $http, $mdDialog,$rootScope, Xhr
 	$scope.states=['Bihar','Uttarakhand','UP','Jharkhand','Delhi','Haryana','Punjab','Other']
 	$scope.departMents=['Irrigation','Transport','Welfare','Traffic','Police','Other']
 	
+	$scope.feedgrivance = function() {
+		var state=''
+		var isNewState = false;
+		var departMent=''
+		var isNewDepartMent= false;
+		if($scope.selectedState!='Other'||$scope.selectedState!='other'){
+			state = $scope.selectedState;
+		}else{
+			isNewState = true;
+			state=$scope.newState;
+		}
+		
+		if($scope.selectedDepartment!='other'||$scope.selectedDepartment!='Other'){
+			departMent=$scope.selectedDepartment;
+		}else{
+			isNewDepartMent = true;
+			departMent=$scope.newDepartment
+		}
+		
+		var dataforpost = {
+			"state":state,
+			"isNewState":isNewState,
+			"departMent":departMent,
+			"isNewDepartMent":isNewDepartMent
+		}
+		
+		var config = {
+				headers:{
+					'Content-Type':'application/json;charset=utf-8'
+				}
+		}
+		
+		var serviceuri = XhrService.getServiceBaseUrl();
+		$http.post(serviceuri + 'welfareservice/createGrievance', dataforpost, config).success(function(data, status, headers, config) {
+				console.log(data)
+		}).error(function(data, status, headers, config) {
+			alert('error')
+			//$scope.loginError = "Invalid username/password combination";
+		});
+	};
+	
 });

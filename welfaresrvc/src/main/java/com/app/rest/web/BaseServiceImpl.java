@@ -164,4 +164,10 @@ public class BaseServiceImpl implements BaseService {
 		return sbf.toString();
 	}
 
+	@Override
+	public Response createGrievance(JsonObject jsonObject) {
+		System.out.println(jsonObject.toString());
+		return Response.ok(jsonObject).build();
+	}
+
 }

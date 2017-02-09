@@ -1,20 +1,22 @@
 <link rel="stylesheet" href="./resources/css/grievapp.css">
 <div class="postgriev" style="height: auto; width: 50%;">
-	<form onsubmit="feedgrivance()"
+	<form ng-submit="feedgrivance()"
 		style="padding-left: 5px; padding-top: 5px; padding-bottom: 5px; padding-right: 5px;">
+		
 		<div class="stateselect" style="text-align: inherit;">
-			<span>State:</span> <select style="margin-left: 24%;border-radius:0.25em;"
+			<span>State:</span> <select
+				style="margin-left: 24%; border-radius: 0.25em;"
 				ng-model="selectedState" ng-options="x for x in states"></select>
 		</div>
 
 		<div ng-if="selectedState=='other' || selectedState=='Other'"
 			class="newstate"
 			style="margin-left: 30%; margin-top: 10px; margin-bottom: 10px; width: 61%;">
-			<input type="text" style="width: 50%;border-radius:0.25em;" placeholder="New State Name"
-				ng-model="newState">
+			<input type="text" style="width: 50%; border-radius: 0.25em;"
+				placeholder="New State Name" ng-model="newState">
 		</div>
 
-		<div ng-if="selectedState!=''"
+		<div ng-show="selectedState!=''"
 			style="margin-bottom: 10px; margin-top: 10px;">
 			Department: <select ng-model="selectedDepartment"
 				ng-options="y for y in departMents" style="margin-left: 17.6%;"></select>
@@ -22,19 +24,21 @@
 				style="margin-left: 30.1%; margin-top: 10px; margin-bottom: 10px;"
 				ng-if="selectedDepartment=='other' || selectedDepartment=='Other'">
 				<input type="text" placeholder="New Department"
-					ng-model="newDepartment" style="width: 44%;border-radius:0.25em;">
+					ng-model="newDepartment" style="width: 44%; border-radius: 0.25em;">
 			</div>
 		</div>
 
 
 
 		<div style="margin-top: 10px; margin-bottom: 10px;">
-			Amount: <input type="text" style="margin-left: 21.5%;width: 30.5%;border-radius:0.25em;"
+			Amount: <input type="text"
+				style="margin-left: 21.5%; width: 30.5%; border-radius: 0.25em;"
 				placeholder="Enter Amount" ng-model="amount">
 		</div>
 		<div>
 			Message:
-			<textarea style="margin-left: 20.3%; border-radius:0.25em" rows="4" cols="50"></textarea>
+			<textarea style="margin-left: 20.3%; border-radius: 0.25em" rows="4"
+				cols="50"></textarea>
 		</div>
 		<div>
 			<input type="submit">

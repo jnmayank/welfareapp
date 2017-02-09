@@ -99,4 +99,10 @@ public interface BaseService {
     @Path("/getMongo")
     @Produces(MediaType.APPLICATION_JSON)
 	String getMongo();    
+	
+	@POST
+	@Path("/createGrievance")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response createGrievance(JsonObject jsonObject);
 }
