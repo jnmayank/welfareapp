@@ -1,6 +1,5 @@
 package com.app.rest.web;
 
-
 import java.io.File;
 import java.net.URI;
 import java.util.ArrayList;
@@ -14,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.mongo.provider.MongoProvider;
+import com.app.mongo.transact.mgr.MongoTransactMgr;
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
 import com.app.rest.vo.CountryListResponseVO;
@@ -42,9 +42,12 @@ public class BaseServiceImpl implements BaseService {
 
 	@Autowired
 	private HibernateTransMgr hibernateTransMgr;
-	
+
 	@Autowired
 	private MongoProvider mongoProvider;
+
+	@Autowired
+	private MongoTransactMgr mongoTransactMgr;
 
 	@Override
 	public WelfareVO<AccountCreationResponseVO> registerNewUser(UserWelfareAccountVO userWelfareAccountVO) {
@@ -127,7 +130,7 @@ public class BaseServiceImpl implements BaseService {
 	public Response getStateList(long countryId) {
 		return Response.ok(hibernateTransMgr.getStateListByCountry(countryId), MediaType.APPLICATION_JSON).build();
 	}
-	
+
 	@Override
 	public Response getCityList(long stateId) {
 		return Response.ok(hibernateTransMgr.getCityListByState(stateId), MediaType.APPLICATION_JSON).build();
@@ -141,15 +144,13 @@ public class BaseServiceImpl implements BaseService {
 	@Override
 	public Response getUserImageForId(long userId) {
 		File fl = new File("/home/nitesh/appdev/git/welfareapp/welfareui/src/main/webapp/resources/img/homeimg3.jpg");
-		/*ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		try {
-			FileImageInputStream faos = new FileImageInputStream(fl);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		return Response.ok(fl,MediaType.APPLICATION_OCTET_STREAM).build();
-		//return null;
+		/*
+		 * ByteArrayOutputStream baos = new ByteArrayOutputStream(); try {
+		 * FileImageInputStream faos = new FileImageInputStream(fl); } catch
+		 * (IOException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
+		return Response.ok(fl, MediaType.APPLICATION_OCTET_STREAM).build();
 	}
 
 	@Override
@@ -159,15 +160,31 @@ public class BaseServiceImpl implements BaseService {
 		MongoIterable<String> listCollectionNames = db.listCollectionNames();
 		StringBuffer sbf = new StringBuffer();
 		for (String string : listCollectionNames) {
-			sbf.append(string+",");
+			sbf.append(string + ",");
 		}
 		return sbf.toString();
 	}
 
 	@Override
 	public Response createGrievance(JsonObject jsonObject) {
-		System.out.println(jsonObject.toString());
-		return Response.ok(jsonObject).build();
+		try {
+			boolean response = mongoTransactMgr.insertGrievanceDataInMongo(jsonObject);
+			return Response.ok(response).build();
+		} catch (Exception e) {
+			return Response.serverError().build();
+		}
+	}
+
+	@Override
+	public Response getListofStatesFromMongo() {
+		List<String> stateList = mongoTransactMgr.getListOfStatesFromMongoServer();
+		return Response.ok(stateList).build();
+	}
+
+	@Override
+	public Response getListOfDepartMents() {
+		List<String> departmentList = mongoTransactMgr.getListOfDepartmentMongoServer();
+		return Response.ok(departmentList).build();
 	}
 
 }

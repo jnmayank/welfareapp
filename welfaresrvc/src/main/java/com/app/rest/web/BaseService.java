@@ -105,4 +105,14 @@ public interface BaseService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response createGrievance(JsonObject jsonObject);
+	
+	@GET
+	@Path("/getListOfStates")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getListofStatesFromMongo();
+	
+	@GET
+	@Path("/getListOfDepartMents")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getListOfDepartMents();
 }
