@@ -1,25 +1,43 @@
 <link rel="stylesheet" href="./resources/css/grievapp.css">
-<div class="postgriev">
-	<form onsubmit="feedgrivance()">
-		State:<select style="margin-left: 20%; width: 55%;"
-			ng-model="selectedState" ng-options="x for x in states">
-		</select> <br> <span
-			style="margin-left: 30%; margin-top: 110px; position: relative;"
-			ng-if="selectedState=='other' || selectedState=='Other'"> <input
-			type="text" ng-model="newDepartment"
-			class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false"
-			style="margin-left: 70.266; margin-left: 4px;"><br>
-		</span> <span ng-if="selectedState!=''"> Department: <select
-			ng-model="selectedDepartment" ng-options="y for y in departMents">
-		</select> <br> <span style="margin-left: 30%;"
-			ng-if="selectedDepartment=='other' || selectedDepartment=='Other'">
-				<input type="text" ng-model="newDepartment"
-				class="ng-pristine ng-valid ng-empty ng-touched"
-				aria-invalid="false" style="margin-left: 70.266; margin-left: 4px;">
-				<br>
-		</span>
-		</span> Amount :<input type="text" ng-model="amount"> <br>
-		Message :<input type="textarea" ng-model="message"> <br>
-		<input type="submit">
+<div class="postgriev" style="height: auto; width: 50%;">
+	<form onsubmit="feedgrivance()"
+		style="padding-left: 5px; padding-top: 5px; padding-bottom: 5px; padding-right: 5px;">
+		<div class="stateselect" style="text-align: inherit;">
+			<span>State:</span> <select style="margin-left: 24%;border-radius:0.25em;"
+				ng-model="selectedState" ng-options="x for x in states"></select>
+		</div>
+
+		<div ng-if="selectedState=='other' || selectedState=='Other'"
+			class="newstate"
+			style="margin-left: 30%; margin-top: 10px; margin-bottom: 10px; width: 61%;">
+			<input type="text" style="width: 50%;border-radius:0.25em;" placeholder="New State Name"
+				ng-model="newState">
+		</div>
+
+		<div ng-if="selectedState!=''"
+			style="margin-bottom: 10px; margin-top: 10px;">
+			Department: <select ng-model="selectedDepartment"
+				ng-options="y for y in departMents" style="margin-left: 17.6%;"></select>
+			<div
+				style="margin-left: 30.1%; margin-top: 10px; margin-bottom: 10px;"
+				ng-if="selectedDepartment=='other' || selectedDepartment=='Other'">
+				<input type="text" placeholder="New Department"
+					ng-model="newDepartment" style="width: 44%;border-radius:0.25em;">
+			</div>
+		</div>
+
+
+
+		<div style="margin-top: 10px; margin-bottom: 10px;">
+			Amount: <input type="text" style="margin-left: 21.5%;width: 30.5%;border-radius:0.25em;"
+				placeholder="Enter Amount" ng-model="amount">
+		</div>
+		<div>
+			Message:
+			<textarea style="margin-left: 20.3%; border-radius:0.25em" rows="4" cols="50"></textarea>
+		</div>
+		<div>
+			<input type="submit">
+		</div>
 	</form>
 </div>
