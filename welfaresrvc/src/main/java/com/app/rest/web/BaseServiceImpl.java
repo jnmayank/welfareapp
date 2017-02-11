@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.mongo.provider.MongoProvider;
+import com.app.mongo.transact.mgr.CountResponseC3;
 import com.app.mongo.transact.mgr.MongoTransactMgr;
 import com.app.rest.vo.AccountCreationResponseVO;
 import com.app.rest.vo.BlogDataPostScrollVO;
@@ -185,6 +186,12 @@ public class BaseServiceImpl implements BaseService {
 	public Response getListOfDepartMents() {
 		List<String> departmentList = mongoTransactMgr.getListOfDepartmentMongoServer();
 		return Response.ok(departmentList).build();
+	}
+
+	@Override
+	public Response getSpecificCounts() {
+		CountResponseC3 counts = mongoTransactMgr.getDistinctCountsByStateaDepartment();
+		return Response.ok(counts).build();
 	}
 
 }

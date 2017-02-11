@@ -115,4 +115,9 @@ public interface BaseService {
 	@Path("/getListOfDepartMents")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getListOfDepartMents();
+	
+	@GET
+	@Path("/getCounts")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getSpecificCounts();
 }
