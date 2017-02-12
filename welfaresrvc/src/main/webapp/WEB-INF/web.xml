@@ -20,10 +20,10 @@
 		<param-value>/WEB-INF/spring/rest-context.xml</param-value>
 	</context-param>
 
-	<context-param>
+	<!-- <context-param>
 		<param-name>log4jConfigLocation</param-name>
 		<param-value>/WEB-INF/lib/log4j.properties</param-value>
-	</context-param>
+	</context-param> -->
 
 	<!-- CXF Rest Servlet definition -->
 	<servlet>
