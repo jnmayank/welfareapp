@@ -74,8 +74,8 @@ app.controller('GrievappCtrl',
 				var keyArray=Object.keys(alpha.counts);
 				for(keys in keyArray){ 
 					var countOfDept = alpha.counts[keyArray[keys]];
-					var KeyName = keyArray[keys];
-					console.log(keyName+ ' value = '+ countOfDept)
+					var keyName = keyArray[keys];
+					console.log(''+keyName+ ' value = '+ countOfDept)
 				}
 			}
 			
